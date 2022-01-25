@@ -1,0 +1,65 @@
+@import "_variables";
+
+@mixin flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0) {
+  display: $display;
+  flex-flow: $direction $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap-x $gap-y;
+}
+@mixin flex($grow: 0, $shrink: 1, $basis: auto) {
+  flex: $grow $shrink $basis;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin subtitle-font {
+  font-family: $header-font;
+  font-size: $title;
+  color: $midnightblue;
+  text-align: center;
+}
+
+@mixin paragraph-font {
+  font-size: $body;
+  color: $midnightblue;
+  text-align: justify;
+}
+
+@mixin title-font {
+  font-family: $header-font;
+  font-size: $headline;
+  color: $midnightblue;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0 20px 0;
+}
+
+@mixin button ( $padding-top-bottom: 10px, $padding-left-right: 50px,  $background-color: $midnightblue, $color: $white, $text-transform: uppercase, $font-size: $secondary-body ) {
+  font-size: $font-size;
+  letter-spacing: 0.19px;
+  text-align: center;
+  background-color: $background-color;
+  color: $color;
+  border-radius: 4px;
+  text-transform: $text-transform;
+  padding: $padding-top-bottom $padding-left-right;
+}
+
+@mixin imageCircle {
+  height: 316px;
+  width: 316px;
+  border-radius: 50%;
+}
+
+@mixin background-image-settings ($background-attachment: fixed, $background-size: cover){
+  background-color: $image-background;
+  background-attachment: $background-attachment;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $background-size;
+}

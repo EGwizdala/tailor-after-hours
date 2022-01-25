@@ -1,0 +1,15 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+    
+.buttonLink{
+    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 20px, $gap-y: 20px);
+    
+    @include button(6px, 20px, $late, $midnightblue, none, $large-body);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    &:hover {
+        background-color: $midnightblue; 
+        color: $white;
+    } 
+}
+    

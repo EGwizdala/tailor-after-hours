@@ -1,0 +1,12 @@
+@import './styles/_reset.scss';
+@import './styles/_variables.scss';
+
+body {
+    font-family: $main-font;
+    color: $midnightblue;
+    font-size: $font-size;
+    margin: 0 auto;
+}
+html {
+    scroll-behavior: smooth;
+}

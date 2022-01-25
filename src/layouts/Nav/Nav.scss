@@ -1,0 +1,36 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+
+.navigation {
+  @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: space-between,$align-items: center, $gap-x: 0, $gap-y: 0);
+  height: 82px;
+  text-transform: uppercase;
+  background-color: $midnightblue;
+  color: $white;
+  padding: map-get($padding, 'main-side');
+  &--logo {
+    font-family: $header-font;
+    color: $warm-gray;
+    font-size: $large-body;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: $white
+    }
+  }
+  &--menu {
+    font-size: $body;
+    font-family: $nav-font;
+    @include flex-parent(flex, row, no-wrap,center, center, 0, 45px);
+  }
+  &--menu__button {
+    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: space-around,$align-items: center, $gap-x: 0, $gap-y: 10px);
+    padding: map-get($padding, nav-element);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: $warm-gray;
+    }
+  }
+}

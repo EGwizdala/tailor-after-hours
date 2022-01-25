@@ -1,0 +1,11 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+    
+.header{
+    height: 280px;
+    @include background-image-settings;
+}
+    
+   
+    
+    
