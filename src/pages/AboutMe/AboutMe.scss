@@ -1,11 +1,11 @@
-@import "../styles/_mixins";
-@import "../styles/_variables";
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
     
 .aboutMe{
     display: grid;
     grid-template-columns: 0.4fr 0.6fr;
     grid-template-rows: auto;
-    grid-template-areas: "header header" "image subtitle" "image paragraph" "image button";
+    grid-template-areas: "header header" "image subtitle" "image paragraph" "image button" "reference reference";
     justify-items: center;
     align-items: center;
     margin: 50px 0;
@@ -37,6 +37,14 @@
         grid-area: button;
         justify-self: end;
         margin-right: 10%;
+    }
+    &__reference {
+        grid-area: reference;
+        &__header {
+            @include flex(1, 0 , 100%);
+            @include title-font;
+            margin-bottom: 0;
+        }
     }      
 }
     

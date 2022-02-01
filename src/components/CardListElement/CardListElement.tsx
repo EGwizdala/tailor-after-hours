@@ -1,17 +1,18 @@
 import React from 'react';
-import './CardList.scss';
+import './CardListElement.scss';
 
 
 interface CardListProps {
     className: string
     title: string
+    category: string
 }
 
-export const CardList: React.FC<CardListProps> = ({title, className, children}) => {
+export const CardListElement: React.FC<CardListProps> = ({title, className, children, category}) => {
     
 
     return (
-        <section className={className}>
+        <section id={category} className={className}>
             <h1 className={`${className}__header`}>{title}</h1>
             {children}
             

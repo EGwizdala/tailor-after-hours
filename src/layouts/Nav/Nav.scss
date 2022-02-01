@@ -8,6 +8,9 @@
   background-color: $midnightblue;
   color: $white;
   padding: map-get($padding, 'main-side');
+  position: fixed;
+  width: 100vw;
+  z-index: 5;
   &--logo {
     font-family: $header-font;
     color: $warm-gray;

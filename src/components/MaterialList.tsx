@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CardList } from './CardList/CardList';
+import { CardListElement } from './CardListElement/CardListElement';
 import { ImageWithButton } from './ImageWithButton';
 import { ReactComponent as Heart } from '../svg/Heart.svg';
 
@@ -18,9 +18,9 @@ export const MaterialList = () => {
     });
 
     return (
-        <CardList className={className} title={title} >
+        <CardListElement className={className} category={title} title={title} >
             {cardListDisplay}
-        </CardList>
+        </CardListElement>
     )
 }
 

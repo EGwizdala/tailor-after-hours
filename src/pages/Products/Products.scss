@@ -1,0 +1,21 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+    
+.products{
+    position: relative;
+    
+    &__button {
+        position: absolute;
+        right: 0;
+        min-width: 260px;
+        max-width: 300px;
+        @include button ($padding-top-bottom: 1px, $padding-left-right: 12px,  $background-color: $late, $color: $midnightblue, $text-transform: none, $font-size: $large-body );
+        margin-right: 5%;
+      
+
+        
+    }
+   
+}
+    
+    

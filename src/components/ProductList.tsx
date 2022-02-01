@@ -1,28 +1,76 @@
 import React from 'react'
 
-import { CardList } from './CardList/CardList';
-import { ImageWithButton } from './ImageWithButton';
-import { ReactComponent as Heart } from '../svg/Heart.svg';
+import { CardListElement } from './CardListElement/CardListElement';
+import { Card } from './Card/Card';
 
 
+interface ProductListProps {
+    title: string
+    category: string
+}
 
-export const ProductList = () => {
-    const imageSrc = <Heart width='50%' height = '50%'/>;
-    const alt = "some image"
-    const products = ['spodnie', 'sukienki', 'bluzki', 'bluzy', 'torby'];
+export const ProductList: React.FC<ProductListProps> = ({title, category}) => {
+    const products = [
+        {
+            productName: 'Nazwa Produktu',
+            category: "Nazwa Kategorii",
+            imageName: "sweater",
+            imageType: "jpg",
+        },
+        {
+            productName: 'Nazwa Produktu',
+            category: "Nazwa Kategorii",
+            imageName: "sweater",
+            imageType: "jpg",
+        },
+        {
+            productName: 'Nazwa Produktu',
+            category: "Nazwa Kategorii",
+            imageName: "sweater",
+            imageType: "jpg",
+        },
+        {
+            productName: 'Nazwa Produktu',
+            category: "Nazwa Kategorii",
+            imageName: "sweater",
+            imageType: "jpg",
+        },
+        {
+            productName: 'Nazwa Produktu',
+            category: "Nazwa Kategorii",
+            imageName: "sweater",
+            imageType: "jpg",
+        },
+        {
+            productName: 'Nazwa Produktu',
+            category: "Nazwa Kategorii",
+            imageName: "sweater",
+            imageType: "jpg",
+        },
+        {
+            productName: 'Nazwa Produktu',
+            category: "Nazwa Kategorii",
+            imageName: "sweater",
+            imageType: "jpg",
+        },
+        {
+            productName: 'Nazwa Produktu',
+            category: "Nazwa Kategorii",
+            imageName: "sweater",
+            imageType: "jpg",
+        },];
     const className = "cardList";
-    const title = "Produkty";
 
     const cardListDisplay = products.map((product) => {
         return (
-            <ImageWithButton className = {`${className}__card`} key={product} imageSrc={imageSrc} alt={alt} buttonText={product}/>
+            <Card key={product.productName} imageName={product.imageName} fileType = {product.imageType} buttonText={product.productName} subtitle={product.category}/>
             )
     });
 
     return (
-        <CardList className={className} title={title} >
+        <CardListElement className={className} title={title} category = {category}>
             {cardListDisplay}
-        </CardList>
+        </CardListElement>
     )
 }
 

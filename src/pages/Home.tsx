@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Header } from '../components/Header/Header';
-import { ProductList } from '../components/ProductList';
+import { ProductTypeList } from '../components/ProductTypeList';
 import { MaterialList } from '../components/MaterialList';
 
 import backgroundHeader from "../images/top-view-of-seamstress-with-fabric-and-scissors.jpg";
@@ -12,7 +12,7 @@ export const Home = () => {
     return (
         <section id = "home">
             <Header imageSrc={backgroundHeader }/>
-            <ProductList />
+            <ProductTypeList category = "produkty" title= "produkty"/>
             <MaterialList />
         </section>
     )

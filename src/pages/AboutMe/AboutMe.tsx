@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { Header } from '../components/Header/Header';
-import { ButtonLink } from '../components/Button/ButtonLink';
+import { Header } from '../../components/Header/Header';
+import { ButtonLink } from '../../components/Button/ButtonLink';
+import {SeeGallery} from '../../components/SeeGallery'
 
-import backgroundHeader  from "../images/back-view-of-female-tailor-with-patterns-in-hands.jpg";
-import backgroundArticle from "../images/high-angle-of-seamstress-using-sewing-machine.jpg"
+import backgroundHeader  from "../../images/back-view-of-female-tailor-with-patterns-in-hands.jpg";
+import backgroundArticle from "../../images/high-angle-of-seamstress-using-sewing-machine.jpg"
 
 import './AboutMe.scss'
 
@@ -35,7 +36,8 @@ export const AboutMe = () => {
                 <h1 className={`${className}__header`}>O mnie</h1>
                 <h2 className={`${className}__subtitle`}>Szycie to moja pasja! </h2>
                 <p className={`${className}__paragraph`}>Cześć! Jestem Ewa, księgowa z zawodu. Na tej stronie dzielę się z Tobą, tym co tworzę po godzinach pracy. Zapraszam do galerii moich prac krawieckich. Znajdziesz tu jakościowe materiały skrojone w fantastyczne formy odzieży, wykonane z dbałością o każdy szczegół.</p>
-                <ButtonLink className={`${className}`} href="#contact" icon={east}>Masz pytania? Napisz</ButtonLink>
+                <ButtonLink className={className}href="#contact" icon={east}>Masz pytania? Napisz</ButtonLink>
+                <SeeGallery className={`${className}__reference`}/>
             </article>
         </section>
     )

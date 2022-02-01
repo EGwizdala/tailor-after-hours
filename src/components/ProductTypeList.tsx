@@ -4,23 +4,26 @@ import { CardListElement } from './CardListElement/CardListElement';
 import { ImageWithButton } from './ImageWithButton';
 import { ReactComponent as Heart } from '../svg/Heart.svg';
 
+interface ProductTypeListProps {
+    title: string
+    category: string
+}
 
-
-export const ProductList = () => {
+export const ProductTypeList: React.FC<ProductTypeListProps> = ({title, category}) => {
     const imageSrc = <Heart width='50%' height = '50%'/>;
     const alt = "some image"
     const products = ['spodnie', 'sukienki', 'bluzki', 'bluzy', 'torby'];
     const className = "cardList";
-    const title = "Produkty";
+  
 
-    const cardListDisplay = products.map((product) => {
+    const cardListDisplay = products.filter(product => product != category).map((product) => {
         return (
             <ImageWithButton className = {`${className}__card`} key={product} imageSrc={imageSrc} alt={alt} buttonText={product}/>
             )
     });
 
     return (
-        <CardListElement className={className} title={title} category = {title}>
+        <CardListElement className={className} category={category} title = {title}>
             {cardListDisplay}
         </CardListElement>
     )
