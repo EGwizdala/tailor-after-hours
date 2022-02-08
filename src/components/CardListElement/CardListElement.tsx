@@ -1,5 +1,5 @@
 import React from 'react';
-import './CardListElement.scss';
+import './index.scss';
 
 
 interface CardListProps {

@@ -12,28 +12,33 @@
         background-color: $image-background;
         @include imageCircle;
         position: relative;
+        overflow: hidden;
+        box-shadow: 0px 3px 6px #00000029;
         &__image {
             position: absolute;
-            top: 45%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100%;
+            width: 125%;
+            height: 125%;
             @include flex-parent;
+            background-position: center;
         }
+        
         &__button {
             position: absolute;
             top: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 120px;
-            height: 40px;
-            @include button( $padding-top-bottom: 0, $padding-left-right: 0,  $background-color: $midnightblue, $color: $white, $text-transform: uppercase, $font-size: $secondary-body );
+            max-width: 220px;
+            min-width: 88px;
+            max-height: 120px;
+            @include button( $padding-top-bottom: 12px, $padding-left-right: 12px,  $background-color: $defaultButtonColor, $color: $white, $text-transform: uppercase, $font-size: $secondary-body );
             transition: all 0.3s ease 0s;
             cursor: pointer;
             &:hover {
-               background-color: $image-background; 
-               color: $midnightblue;
-               border: 1px dashed $midnightblue;
+               background-color: $midnightblue; 
+               box-shadow: 0px 3px 6px #00000029;
             }
         }
     }

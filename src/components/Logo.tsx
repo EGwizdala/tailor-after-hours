@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface LogoProps {
     className: string
@@ -9,7 +9,7 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps>= ({className}) => {
     return (
         <>
-            <a className={`${className}--logo`} href="#home">Krawcowa po godzinach</a>
+            <Link className={`${className}--logo`} to="/">Krawcowa po godzinach</Link>
         </>
     )
 } 

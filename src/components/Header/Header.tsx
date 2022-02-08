@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Header.scss'
+import './index.scss'
 
 interface HeaderProps {
     imageSrc: string

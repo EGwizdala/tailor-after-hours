@@ -23,9 +23,12 @@
         font-size: $body;
         text-transform: uppercase;
         padding: map-get($padding , 'card' );
-        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
-}
+        @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 10px);
+    }
     &__subtitle {
+        width: 100%;
+    }
+    &__link {
         width: 100%;
     }
     &__button {

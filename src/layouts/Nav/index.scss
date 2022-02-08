@@ -32,8 +32,7 @@
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    &:hover {
-      color: $warm-gray;
-    }
+    position: relative;
+    
   }
 }

@@ -3,17 +3,17 @@ import React from 'react'
 import { CardListElement } from './CardListElement/CardListElement';
 import { ImageWithButton } from './ImageWithButton';
 import { ReactComponent as Heart } from '../svg/Heart.svg';
+import { getMaterialCategories } from '../data/api';
 
 export const MaterialList = () => {
-    const imageSrc = <Heart width='50%' height = '50%'/>;
-    const alt = "some image";
+    const imageSrc = 'material.png';
     const materials = ['dostępne', 'chcesz swoje?'];
     const className = "cardList";
     const title = "Materiały";
 
     const cardListDisplay = materials.map((material) => {
         return (
-            <ImageWithButton className = {`${className}__card`} key={material} imageSrc={imageSrc} alt={alt} buttonText={material}/>
+            <ImageWithButton productType= {material} className = {`${className}__card`} key={material} imageSrc={imageSrc} buttonText={material}/>
             )
     });
 

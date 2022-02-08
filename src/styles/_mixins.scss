@@ -24,6 +24,7 @@
   text-align: center;
 }
 
+
 @mixin paragraph-font {
   font-size: $body;
   color: $midnightblue;
@@ -39,7 +40,7 @@
   padding: 60px 0 20px 0;
 }
 
-@mixin button ( $padding-top-bottom: 10px, $padding-left-right: 50px,  $background-color: $midnightblue, $color: $white, $text-transform: uppercase, $font-size: $secondary-body ) {
+@mixin button ( $padding-top-bottom: 16px, $padding-left-right: 50px,  $background-color: $midnightblue, $color: $white, $text-transform: uppercase, $font-size: $secondary-body ) {
   font-size: $font-size;
   letter-spacing: 0.19px;
   text-align: center;

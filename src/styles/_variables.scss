@@ -12,11 +12,16 @@ $body: #{$font-size * 1.6};
 $secondary-body: #{$font-size * 1.28};
 
 $midnightblue: #14213d;
+$defaultButtonColor: #2E3952;
 $warm-gray: #C9B194;
 $white: #fff;
-$image-background: #E4E4E4;
+$image-background: #E5E5E5;
 $late: #C5AD8F;
+$defaultStateButtonColor: #D1BFA7;
+$chocolate: #413A34;
 
+$image-width: 648px;
+$margin-left: calc(((100vw * 0.65) - $image-width) / 2);
 
 
 

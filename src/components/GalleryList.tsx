@@ -4,18 +4,23 @@ import { CardListElement } from './CardListElement/CardListElement';
 import { ImageWithButton } from './ImageWithButton';
 import { ReactComponent as Heart } from '../svg/Heart.svg';
 
+import { getItemCategories } from '../data/api';
+
 
 
 export const ProductList = () => {
-    const imageSrc = <Heart width='50%' height = '50%'/>;
-    const alt = "some image"
-    const products = ['spodnie', 'sukienki', 'bluzki', 'bluzy', 'torby'];
+    const products = getItemCategories();
     const className = "cardList";
     const title = "Produkty";
 
     const cardListDisplay = products.map((product) => {
         return (
-            <ImageWithButton className = {`${className}__card`} key={product} imageSrc={imageSrc} alt={alt} buttonText={product}/>
+            <ImageWithButton
+                productType={product.name}
+                className={`${className}__card`}
+                key={product.name}
+                imageSrc={product.img}
+                buttonText={product.name} />
             )
     });
 

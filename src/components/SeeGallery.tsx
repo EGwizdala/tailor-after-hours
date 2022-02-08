@@ -16,7 +16,7 @@ export const SeeGallery: React.FC<SeeGalleryProps> = ({className}) => {
     const cardClassName = "cardList"
     const cardListDisplay = listElements.map((element) => {
         return (
-            <ImageWithButton className = {`${cardClassName}__card`} key={element} imageSrc={imageSrc} alt={alt} buttonText={element}/>
+            <ImageWithButton className = {`${cardClassName}__card`} key={element} imageSrc={imageSrc} productType= {element} buttonText={element}/>
             )
     });
 

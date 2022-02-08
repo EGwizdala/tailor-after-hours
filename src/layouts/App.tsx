@@ -1,17 +1,21 @@
-
-import {Nav} from'./Nav/Nav';
-import {Main} from './Main';
-import {Footer} from './Footer/Footer';
+import { BrowserRouter} from 'react-router-dom';
+import { Main } from './Main';
+import { Footer } from './Footer/Footer';
 
 import './App.scss';
 
 function App() {
+ 
   return (
     <div className="App">
-      <Nav />
-      <Main />
-      <Footer />
-    </div>
+      <BrowserRouter>
+          {/* <Nav /> */}
+          <Main/>   
+          <Footer />
+        </BrowserRouter>
+      </div>
+      
+
   );
 }
 

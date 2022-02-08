@@ -2,7 +2,7 @@ import { ReactComponent as Instagram } from '../../svg/Instagram.svg';
 import { ReactComponent as Facebook } from '../../svg/Facebook.svg';
 import { ReactComponent as UpArrow } from '../../svg/Component 17 – 21.svg';
 
-import './Footer.scss'
+import './index.scss'
 
 export const Footer = () => {
     const className = "footer"

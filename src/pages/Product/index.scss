@@ -1,0 +1,43 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+    
+.product{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 65% 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "slider container" 
+    "headerSecondary headerSecondary" 
+    "paragraph .";
+    justify-items: center;
+    align-items: center;
+    &__slider {
+        grid-area: slider;
+    }
+    &__container {
+        grid-area: container;
+    }
+    &__header--secondary {
+        grid-area: headerSecondary;
+        justify-self: start;
+        @include title-font;
+        margin-left: $margin-left;
+        margin-bottom: 32px;
+        padding: 0;
+    }
+    &__paragraph {
+        grid-area: paragraph;
+        justify-self: start;
+        margin-left: $margin-left;
+        @include paragraph-font;
+        margin-bottom: 112px;
+        & > li{
+            list-style: decimal;
+        }
+
+    }
+   
+}
+    
+    
