@@ -26,8 +26,8 @@ export const Main = () => {
     return (
         <Routes>
             
-            <Route path="/" element={<LayoutsWithNavbar />}>
-                <Route path="/" element={<Home />} />
+            <Route path="/tailor-after-hours" element={<LayoutsWithNavbar />}>
+                <Route path="/tailor-after-hours" element={<Home />} />
                 <Route path="/aboutMe" element={<AboutMe />} />
                 <Route path="/produkty/:productType" element={<Products/>} />
                
