@@ -94,13 +94,15 @@ const ItemCategories = [
           name: "dresy",
           id: "dres luźny",
           size: "S, M, L, XL",
-          materials: "wyłącznie z domieszką strechu"
+          materials: "wyłącznie z domieszką strechu",imageName: "sweater",
+          imageType: "jpg",
         },
         {
           name: "cygaretki",
           id: "cygaretki wąskie",
           size: "S, M, L, XL",
-          materials: "wyłącznie z domieszką strechu"
+          materials: "wyłącznie z domieszką strechu",imageName: "sweater",
+          imageType: "jpg",
         },
         {
           name: "szorty",
@@ -132,7 +134,7 @@ const ItemCategories = [
           imageType: "jpg",
         },
         {
-          name: "w tylu boho",
+          name: "w stylu boho",
           id: "boho na ramiączkach",
           size: "S, M, L, XL",
           materials: "wyłącznie z domieszką strechu",

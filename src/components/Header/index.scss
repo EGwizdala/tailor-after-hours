@@ -2,7 +2,7 @@
 @import "../../styles/_variables";
     
 .header{
-    height: 280px;
+    height: calc(280px + $nav-height);
     @include background-image-settings;
 }
     

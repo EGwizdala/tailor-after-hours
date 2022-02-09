@@ -5,9 +5,7 @@ import { CardListElement } from './CardListElement/CardListElement';
 import { ImageWithButton } from './ImageWithButton';
 import { getItemCategories } from '../data/api';
 
-interface Products {
-    name: string
-}
+
 
 interface ProductTypeListProps {
     title: string  | any
@@ -44,16 +42,4 @@ export const ProductTypeList: React.FC<ProductTypeListProps> = ({ title, categor
 }
 
 
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-
-var requestOptions: any = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
-
-fetch("http://mighty-beyond-31038.herokuapp.com/api/categories", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+//Koniecznie opisz problem z corsami, jaki z ciebie zajebisty hakier!!! :D
