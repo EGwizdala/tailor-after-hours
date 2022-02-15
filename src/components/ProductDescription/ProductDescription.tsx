@@ -10,10 +10,12 @@ interface ProductDescriptionProps {
     category: string
     size: string
     materials: string
+    description: string
 };
 
-export const ProductDescription: React.FC<ProductDescriptionProps> = ({className, productName, id, category, size, materials}) => {
+export const ProductDescription: React.FC<ProductDescriptionProps> = ({className, productName, id, category, size, materials, description}) => {
     return (
+        <>
         <div className={`${className}__container`}>
             <nav className={`${className}__nav`}>Home/Porduct/Produkty
             </nav>
@@ -25,7 +27,6 @@ export const ProductDescription: React.FC<ProductDescriptionProps> = ({className
             <div className={`${className}__subtitle--lowercase`}>{materials}</div>
             <ButtonLink
                     className={className}
-                    
                     icon={
                         <GoogleIcon
                             icon="east"
@@ -33,5 +34,13 @@ export const ProductDescription: React.FC<ProductDescriptionProps> = ({className
                     }>Masz pytania? Napisz
             </ButtonLink>
         </div>
+        <h2
+            className={`${className}__header--secondary`}>
+            Opis
+        </h2>
+        <p className={`${className}__paragraph`}>
+            {description}
+        </p>
+        </>
     )
 }

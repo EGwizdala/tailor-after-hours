@@ -6,9 +6,10 @@ interface ImageWithButtonProps {
     buttonText: string
     className: string
     productType: any
+    onClick?: (e: React.FormEvent<EventTarget>) => void
 }
 
-export const ImageWithButton: React.FC<ImageWithButtonProps> = ({ imageSrc, buttonText, className, children, productType }) => {
+export const ImageWithButton: React.FC<ImageWithButtonProps> = ({ imageSrc, buttonText, className, children, productType, onClick}) => {
     
     const backgroundStyle = {
         backgroundImage: `url('${process.env.PUBLIC_URL}/images/icons/${imageSrc}')`,
@@ -17,7 +18,7 @@ export const ImageWithButton: React.FC<ImageWithButtonProps> = ({ imageSrc, butt
     return (
         <div className={className}>
             <div style={backgroundStyle} className = {`${className}__image`}>{children}</div>
-            <Link to={`/produkty/${productType}`} className={`${className}__button`} >{buttonText}
+            <Link onClick = {onClick} to={`/produkty/${productType}`} className={`${className}__button`} >{buttonText}
             </Link>
         </div>
     )

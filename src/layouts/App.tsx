@@ -9,13 +9,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-          {/* <Nav /> */}
           <Main/>   
           <Footer />
         </BrowserRouter>
       </div>
-      
-
   );
 }
 

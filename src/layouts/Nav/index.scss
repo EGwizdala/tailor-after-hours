@@ -11,6 +11,9 @@
   position: fixed;
   width: 100vw;
   z-index: 5;
+  &__icon {
+    transition: all 0.3s ease 0s;
+  }
   &--logo {
     font-family: $header-font;
     color: $warm-gray;
@@ -32,7 +35,11 @@
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    position: relative;
+    &:hover {
+      color: $late;
+    }
     
   }
 }
+
+

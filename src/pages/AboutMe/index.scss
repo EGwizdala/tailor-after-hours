@@ -37,6 +37,9 @@
         grid-area: button;
         justify-self: end;
         margin-right: 10%;
+        font-size: $large-body;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
     &__reference {
         grid-area: reference;

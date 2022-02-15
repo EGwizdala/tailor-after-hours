@@ -1,12 +1,15 @@
 import { Home } from '../pages/Home';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import {Nav} from'./Nav/Nav';
-import { Footer } from './Footer/Footer';
 import { AboutMe } from '../pages/AboutMe/AboutMe';
 import { Products } from '../pages/Products/Products';
+import { ProductsHome } from '../pages/ProductsHome';
 import { Product } from '../pages/Product/Product';
+import { HowToBuy } from '../pages/HowToBuy/HowToBuy';
 
-const Type = () => <div>kura rura</div>
+const ROUTE_PREFIX = process.env.NODE_ENV === 'production' ? "/tailor-after-hours" : ""
+
+
 
 export const Main = () => {
     function LayoutsWithNavbar() {
@@ -26,13 +29,13 @@ export const Main = () => {
     return (
         <Routes>
             
-            <Route path="/" element={<LayoutsWithNavbar />}>
-                <Route path="/tailor-after-hours" element={<Home />} />
-                <Route path="/aboutMe" element={<AboutMe />} />
-                <Route path="/produkty/:productType" element={<Products/>} />
-               
-                <Route path="/produkty/:productType/:productName" element={<Product />}/>
-                </Route>
+            <Route path={`${ROUTE_PREFIX}/`} element={<LayoutsWithNavbar />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/oMnie" element={<AboutMe />} />
+                <Route path="/produkty" element={<ProductsHome/>} />
+                    <Route path="/produkty/:productType" element={<Products/>} />
+                        <Route path="/produkty/:productType/:productName" element={<Product />}/>
+                <Route path="/jakKupowac" element={<HowToBuy />} />
                 <Route
                     path="*"
                     element={
@@ -41,7 +44,7 @@ export const Main = () => {
                         </main>
                     }
                 />
-             
+            </Route> 
         </Routes>
     )
 } 

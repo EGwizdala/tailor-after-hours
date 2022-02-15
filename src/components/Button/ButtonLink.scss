@@ -6,6 +6,11 @@
     @include button(16px, 16px, $defaultStateButtonColor, none, $large-body);
     transition: all 0.3s ease 0s;
     cursor: pointer;
+    &:hover{
+        background-color: $late;
+        box-shadow: $box-shadow;
+    }
+
    
 }
     

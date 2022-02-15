@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { DropdownMenu} from './DropdownMenu/DropdownMenu'
 import { GoogleIcon } from './GoogleIcon';
@@ -8,15 +8,22 @@ interface MenuProps {
 }
 
 export const Menu: React.FC<MenuProps> = ({ className }) => {
-    const expaned_more_icon = <span className="material-icons-outlined">expand_more</span>
-    const icon = "expand_more"
+    const [display, setDisplay] = useState(false);
+    
+    const icon = "expand_more";
 
     return (
         <>
         <div className={`${className}--menu`}>
-            <Link className={`${className}--menu__button`} to="/aboutMe">O mnie</Link>
-                <Link className={`${className}--menu__button`} to="/products">Produkty{<GoogleIcon className={className} icon={icon} />}<DropdownMenu /></Link>
-            
+            <Link className={`${className}--menu__button`} to="/oMnie">O mnie</Link>
+                <Link to = "/produkty"
+                    className={`${className}--menu__button dropdown`} >
+                    Produkty
+                    {<GoogleIcon className={display ? ` rotate ${className}` : `${className}`} icon={icon} />}
+                    <DropdownMenu classAnimation={display ? "menuSlideDown" :  "" }
+                /> 
+                </Link>
+            <Link className={`${className}--menu__button`} to= "/jakKupowac">Jak kupować</Link>
                 
                 
             {/* <a className={`${className}--menu__button`} href="#products">Produkty {<GoogleIcon className={className} icon={icon}/>}</a>

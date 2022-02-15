@@ -22,18 +22,16 @@ var requestOptions:requestOptions= {
 };
 
 
-  
-
 interface ProductListProps {
     title: string | any
     category: string  | any
 }
 
 
-
 export const ProductList: React.FC<ProductListProps> = ({ title, category }) => {
-    
-    const [userData, setUserData] = useState({});
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [items, setItems] = useState([]);
 
     const products: any = getProductCategories(title)
 
@@ -41,7 +39,19 @@ export const ProductList: React.FC<ProductListProps> = ({ title, category }) => 
     const className = "cardList";
     let params = useParams();
     const productType = params.productType;
-    console.log(productType)
+
+    useEffect(() => {
+        fetch("http://localhost:5000/getData", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            setIsLoaded(true);
+            setItems(result);
+          },
+        (error) => {
+            setIsLoaded(true);
+            setError(error);
+        })
+    }, [])
 
     const cardListDisplay = productTypes.map((product: any) => {
         return (
@@ -57,20 +67,6 @@ export const ProductList: React.FC<ProductListProps> = ({ title, category }) => 
         
             )
     });
-    const endpoint = "http://localhost:5000/getData"
-
-    const fetchData = () => {
-    return fetch(endpoint, requestOptions)
-        .then(response => response.text())
-        .then(result =>  setUserData(result))
-        .catch(error => console.log('error', error));
-}
-    useEffect(() => {
-        const data = fetchData(); 
-    }, []);
-    const data = userData.toString()
-    const dataArr = JSON.parse(data)
-    console.log(dataArr)
 
     return (
         <CardListElement

@@ -14,8 +14,7 @@ export const CardListElement: React.FC<CardListProps> = ({title, className, chil
     return (
         <section id={category} className={className}>
             <h1 className={`${className}__header`}>{title}</h1>
-            {children}
-            
+            {children} 
         </section>
     )
 }

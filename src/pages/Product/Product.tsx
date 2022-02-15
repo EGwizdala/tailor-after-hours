@@ -25,6 +25,7 @@ export const Product= () => {
             category: "spodnie",
             size: "M, S, L, XL",
             materials: "wyłącznie z domieszką strechu",
+            description: "Cygaretkowy fason tych spodni optycznie wysmukla nogi, a długość do kostek sprawia, że spodnie pasują zarówno do sandałów jak i do botków"
         }
     
    
@@ -40,6 +41,7 @@ export const Product= () => {
                     backgroundArticle={backgroundArticle}
                 />
                 < ProductDescription
+                    description = {product.description}
                     className={className}
                     productName={product.productName}
                     id={product.id}
@@ -48,18 +50,6 @@ export const Product= () => {
                     materials={product.materials}
                 />
                 
-                
-                <h2
-                    className={`${className}__header--secondary`}>
-                    Opis
-                </h2>
-                <ol className={`${className}__paragraph`}>
-                    <li>Jeśli podoba Ci się jakiś produkt prześlij zapytanie korzystając z zakładki kontakt.</li>
-                    <li>Wyślij swoje zapytanie o cenę. </li>
-                    <li>Skontaktujemy się z Tobą mailowo w celu ustalenia szczegółów zamówienia i podania ostatecznej ceny oraz terminu wysyłki. Ustalenia zostaną zawarte w formularzu zlecenia, który zostanie przesłany do Ciebie pocztą. </li>
-                    <li>Po mailowym zaakceptowaniu i dokonaniu przedpłaty, przystąpimy do realizacji zlecenia. W trakcie realizacji zamówienia przesyłamy zdjęcia i ustalamy czy wszystko jest w porządku.</li>
-                </ol>
-               
             </article>
         </section>
     )
