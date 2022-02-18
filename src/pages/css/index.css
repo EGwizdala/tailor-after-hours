@@ -1,0 +1,26 @@
+.products {
+  position: relative;
+}
+
+.products__button {
+  position: absolute;
+  right: 0;
+  min-width: 260px;
+  max-width: 300px;
+  font-size: 20px;
+  letter-spacing: 0.19px;
+  text-align: center;
+  background-color: #D1BFA7;
+  color: #14213d;
+  border-radius: 4px;
+  text-transform: none;
+  padding: 6px 16px;
+  margin-right: 5%;
+}
+
+.products__button:hover {
+  background-color: #C5AD8F;
+  -webkit-box-shadow: 0px 2px 2px #00000029;
+          box-shadow: 0px 2px 2px #00000029;
+}
+/*# sourceMappingURL=index.css.map */

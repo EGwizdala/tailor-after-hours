@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,SAAS,CAAA;EACL,QAAQ,EAAE,QAAQ;CAkBrB;;AAhBI,AAAD,iBAAS,CAAC;EACN,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,CAAC;EACR,SAAS,EAAE,KAAK;EAChB,SAAS,EAAE,KAAK;ECiCtB,SAAS,ECjCA,IAAC;EDkCV,cAAc,EAAE,MAAM;EACtB,UAAU,EAAE,MAAM;EAClB,gBAAgB,EC1BQ,OAAO;ED2B/B,KAAK,ECjCQ,OAAO;EDkCpB,aAAa,EAAE,GAAG;EAClB,cAAc,EDtCoJ,IAAI;ECuCtK,OAAO,EDvCqC,GAAG,CAAuB,IAAI;EACpE,YAAY,EAAE,EAAE;CAQnB;;AAdA,AAOG,iBAPK,AAOJ,MAAM,CAAC;EACJ,gBAAgB,EEKrB,OAAO;EFJF,UAAU,EAAE,qBAAqB;CAEpC",
+    "sources": [
+        "../Products/index.scss",
+        "../../styles/_mixins.scss",
+        "../../styles/_variables.scss",
+        "../../styles/_variables.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}
