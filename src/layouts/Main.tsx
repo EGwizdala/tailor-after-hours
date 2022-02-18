@@ -29,8 +29,8 @@ export const Main = () => {
     return (
         <Routes>
             
-            <Route path={`${ROUTE_PREFIX}/`} element={<LayoutsWithNavbar />}>
-                <Route path="/" element={<Home />} />
+            <Route path={`${ROUTE_PREFIX}`} element={<LayoutsWithNavbar />}>
+                <Route path="/tailor-after-hours" element={<Home />} />
                 <Route path="/oMnie" element={<AboutMe />} />
                 <Route path="/produkty" element={<ProductsHome/>} />
                     <Route path="/produkty/:productType" element={<Products/>} />
