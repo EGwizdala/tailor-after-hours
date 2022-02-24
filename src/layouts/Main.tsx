@@ -35,7 +35,7 @@ export const Main = () => {
                 <Route path="/oMnie" element={<AboutMe />} />
                 <Route path="/produkty" element={<Categories/>} />
                     <Route path="/produkty/:productType" element={<Products/>} />
-                        <Route path="/produkty/:productType/:productName" element={<Product />}/>
+                        <Route path="/produkty/:productType/:productId" element={<Product />}/>
                 <Route path="/jakKupowac" element={<HowToBuy />} />
                 <Route path="/Kontakt" element={<ContactMe />} />
                 <Route

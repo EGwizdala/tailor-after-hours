@@ -36,7 +36,7 @@ export const ProductList: React.FC<ProductListProps> = ({ title, category }) => 
         return (
            <Card
                 productType={productCategory}
-                productName = {product.name}
+                productId = {product.id}
                 key={product.name}
                 imageName={`${product.category}_${product.id}_1`}
                 fileType="jpg"

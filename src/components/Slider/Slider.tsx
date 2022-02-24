@@ -5,14 +5,11 @@ import './index.scss'
 
 interface SliderProps {
     className: string
-    backgroundArticle: string
+    imageName: string
+    fileType: string
 }
 
-export const Slider: React.FC<SliderProps> = ({className, backgroundArticle}) => {
-
-    const articleImageStyle = {
-        backgroundImage: `url(${backgroundArticle})`,
-    };
+export const Slider: React.FC<SliderProps> = ({className, imageName, fileType}) => {
 
     const sliderClassName = "slider"
     
@@ -22,7 +19,8 @@ export const Slider: React.FC<SliderProps> = ({className, backgroundArticle}) =>
                 icon="arrow_back_ios_new"
             className={sliderClassName}
             />
-            <div className={`${sliderClassName}__image`} style = {articleImageStyle} >
+            <div className={`${sliderClassName}__image`}  style={{
+                backgroundImage: `url(${process.env.PUBLIC_URL}/images/clothes/${imageName}.${fileType})`}} >
             {/* <img
                 src={images.article}
                 alt="female tailor with the sewing machine"></img> */}
