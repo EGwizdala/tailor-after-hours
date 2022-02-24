@@ -8,7 +8,7 @@ import { Product } from '../pages/Product/Product';
 import { HowToBuy } from '../pages/HowToBuy/HowToBuy';
 import { ContactMe } from '../pages/ContactMe/ContactMe';
 
-const ROUTE_PREFIX = process.env.NODE_ENV === 'production' ? "/" : "/"
+const ROUTE_PREFIX = process.env.NODE_ENV === 'production' ? "/tailor-after-hours" : "/"
 
 
 
