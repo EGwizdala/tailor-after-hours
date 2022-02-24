@@ -1,0 +1,43 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+    
+.contactMe{
+    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: flex-start, $gap-x: 0, $gap-y: 182px);
+    height: $main-height;
+    
+    
+    &__header {
+        @include flex(1, 0, 100%);
+        @include title-font;
+    }
+    &__article {
+        max-width: 480px;
+        @include flex(0, 0, 50%);
+        @include paragraph-font;
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: flex-start, $gap-x: 20px, $gap-y: 16px);
+
+
+    }
+    &__contact-detail {
+        @include flex(0, 0, 100%);
+        align-self: flex-start;
+        cursor: pointer;
+        &:hover{
+            color: $late
+        }
+    }
+    &__button {
+        max-width: 40px;
+    }
+    &__button svg path{
+        fill: $midnightblue;
+        &:hover{
+            fill: $late
+        }
+    }
+    &__button:hover svg path{
+        fill: $late
+    }
+}
+    
+    

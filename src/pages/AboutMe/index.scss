@@ -40,6 +40,9 @@
         font-size: $large-body;
         padding-top: 6px;
         padding-bottom: 6px;
+        &:hover{
+            @include button-hover
+        }
     }
     &__reference {
         grid-area: reference;

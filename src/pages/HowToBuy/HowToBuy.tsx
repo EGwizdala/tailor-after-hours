@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 import { Header } from '../../components/Header/Header';
@@ -9,8 +10,8 @@ import backgroundHeader  from "../../images/top-view-accessories.jpg";
 
 import './index.scss'
 
-
 export const HowToBuy= () => {
+    
     const east = <span className="material-icons-outlined">
         east
     </span>;

@@ -7,9 +7,8 @@ import { ProductDescription } from '../../components/ProductDescription/ProductD
 import backgroundHeader  from "../../images/back-view-of-female-tailor-with-patterns-in-hands.jpg";
 import backgroundArticle from "../../images/high-angle-of-seamstress-using-sewing-machine.jpg";
 
-import './index.scss';
-
-
+import "./index.scss";
+    
 
 export const Product= () => {
     
@@ -49,7 +48,13 @@ export const Product= () => {
                     size={product.size}
                     materials={product.materials}
                 />
-                
+                 <h2
+            className={`${className}__header--secondary`}>
+            Opis:
+        </h2>
+        <p className={`${className}__paragraph`}>
+            {product.description}
+        </p>
             </article>
         </section>
     )

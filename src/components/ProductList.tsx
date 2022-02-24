@@ -1,73 +1,52 @@
-import {useEffect, useState} from "react";
-import { Link, Outlet, Routes, useHref, useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 
 import { CardListElement } from './CardListElement/CardListElement';
 import { Card } from './Card/Card';
-import { getProductCategories } from '../data/api';
+import { useFetch } from '../data/data';
 
-
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-
-interface requestOptions {
-    method: any
-    headers: any
-    redirect: any
-  }
-
-var requestOptions:requestOptions= {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
 
 
 interface ProductListProps {
-    title: string | any
-    category: string  | any
+  title: any
+  category: any
 }
 
-
 export const ProductList: React.FC<ProductListProps> = ({ title, category }) => {
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [items, setItems] = useState([]);
 
-    const products: any = getProductCategories(title)
-
-   const productTypes = products.types
-    const className = "cardList";
-    let params = useParams();
-    const productType = params.productType;
-
-    useEffect(() => {
-        fetch("http://localhost:5000/getData", requestOptions)
-        .then(response => response.json())
-        .then(result => {
-            setIsLoaded(true);
-            setItems(result);
-          },
-        (error) => {
-            setIsLoaded(true);
-            setError(error);
-        })
-    }, [])
-
-    const cardListDisplay = productTypes.map((product: any) => {
+     const className = "cardList";
+     let params = useParams();
+     const productCategory = params.productType;
+  
+  
+  const [productLoading, productError, productData] = useFetch(
+        productCategory
+          ? `http://mighty-beyond-31038.herokuapp.com/api/categories/${productCategory.toLowerCase()}/items`
+          : null,
+  )
+    console.log(productData ? productData : "brak danych")
+  
+    if (productLoading) {
+      console.log('loading...') 
+    }
+    if (productError) {
+      console.log('error...') 
+    }  
+  
+    const cardListDisplay = productData ? productData.map((product: any) => {
         return (
            <Card
-                productType={productType}
+                productType={productCategory}
                 productName = {product.name}
                 key={product.name}
-                imageName={product.imageName}
-                fileType={product.imageType}
+                imageName={`${product.category}_${product.id}_1`}
+                fileType="jpg"
                 buttonText={product.name}
-                subtitle={product.id}
+                subtitle={product.subname}
                 />
         
             )
-    });
-
+    }) : <>strona się ładuje </>;
+   
     return (
         <CardListElement
             className={className}

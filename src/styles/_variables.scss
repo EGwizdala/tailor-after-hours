@@ -1,5 +1,10 @@
 $screen-width: 70vw;
+$screen-height: 100vh;
 $nav-height: 82px;
+$footer-height: 82px;
+$header-height: calc(280px + $nav-height);
+$main-height: calc($screen-height - $header-height - $footer-height);
+
 
 $header-font:'Tenor Sans', sans-serif;
 $main-font: 'Poppins', sans-serif;

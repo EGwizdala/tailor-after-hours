@@ -32,6 +32,9 @@
         margin-left: $margin-left;
         @include paragraph-font;
         margin-bottom: 112px;
+        & > li{
+            list-style: decimal;
+        }
 
     }
    

@@ -37,7 +37,7 @@
   color: $midnightblue;
   text-align: center;
   text-transform: uppercase;
-  padding: 60px 0 20px 0;
+  padding: 60px 0 31px 0;
 }
 
 @mixin button ( $padding-top-bottom: 16px, $padding-left-right: 50px,  $background-color: $midnightblue, $color: $white, $text-transform: uppercase, $font-size: $secondary-body ) {
@@ -66,4 +66,7 @@
 }
 
 
-
+@mixin button-hover {
+    background-color: $late;
+    box-shadow: $box-shadow;
+}

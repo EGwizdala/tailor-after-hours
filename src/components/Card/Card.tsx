@@ -22,7 +22,7 @@ export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subt
             <div
                 className={`${className}__image`}
                 style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/images/${imageName}.${fileType})`}}>
+                backgroundImage: `url(${process.env.PUBLIC_URL}/images/clothes/${imageName}.${fileType})`}}>
             </div>
             <div className={`${className}__description`} >
                 <div className={`${className}__subtitle`}>{subtitle}</div>

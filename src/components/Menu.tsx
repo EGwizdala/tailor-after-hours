@@ -23,7 +23,8 @@ export const Menu: React.FC<MenuProps> = ({ className }) => {
                     <DropdownMenu classAnimation={display ? "menuSlideDown" :  "" }
                 /> 
                 </Link>
-            <Link className={`${className}--menu__button`} to= "/jakKupowac">Jak kupować</Link>
+                <Link className={`${className}--menu__button`} to="/jakKupowac">Jak kupować</Link>
+                <Link className={`${className}--menu__button`} to= "/Kontakt">Kontakt</Link>
                 
                 
             {/* <a className={`${className}--menu__button`} href="#products">Produkty {<GoogleIcon className={className} icon={icon}/>}</a>

@@ -44,11 +44,19 @@
         @include flex(0, 0, auto);
         min-width: 260px;
         max-width: 300px;
-        font-size: $large-body;
+       font-size: $large-body;
         padding-top: 6px;
         padding-bottom: 6px;;
         margin-right: 5%;
+        &:hover {
+            background-color: $late; 
+            box-shadow: 0px 2px 2px #00000029;
+            
+        } 
     }
+
+   
+    
 }
     
     

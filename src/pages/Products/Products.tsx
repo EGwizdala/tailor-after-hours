@@ -4,14 +4,12 @@ import { useParams } from "react-router-dom";
 import { Header } from '../../components/Header/Header';
 import { ProductList } from '../../components/ProductList';
 import { ButtonLink } from '../../components/Button/ButtonLink';
-import { ProductTypeList } from '../../components/ProductTypeList';
+import { ProductCategoryList } from '../../components/ProductCategoryList';
 
 
 import './index.scss';
 
 import backgroundHeader from "../../images/top-view-of-seamstress-with-fabric-and-scissors.jpg";
-
-
 
 
 
@@ -29,7 +27,7 @@ export const Products = () => {
             <Header imageSrc={backgroundHeader }/>
             <ProductList title={title} category={title}/>
             <ButtonLink className={className} icon={east} >Zobacz materiały!</ButtonLink>
-            <ProductTypeList category={title} title="Pozostałe produkty" />
+            <ProductCategoryList category={title} title="Pozostałe produkty" />
             
         </section>
     )

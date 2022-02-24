@@ -34,13 +34,7 @@ export const ProductDescription: React.FC<ProductDescriptionProps> = ({className
                     }>Masz pytania? Napisz
             </ButtonLink>
         </div>
-        <h2
-            className={`${className}__header--secondary`}>
-            Opis
-        </h2>
-        <p className={`${className}__paragraph`}>
-            {description}
-        </p>
+       
         </>
     )
 }

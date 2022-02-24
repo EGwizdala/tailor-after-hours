@@ -3,17 +3,9 @@
 
 .footer {
   @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-end, $align-items: center, $gap-x: 0, $gap-y: 30px);
-  height: 82px;
-  text-transform: uppercase;
+  height: $footer-height;
   background-color: $midnightblue;
   color: $white;
   padding: map-get($padding, 'main-side');
-  &__button svg {
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    &:hover {
-      transform: translateY(-5px);
-    }
-  }
   
 }
