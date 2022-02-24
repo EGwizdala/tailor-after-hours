@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tailor-after-hours/static/css/main.07a5772c.css",
-    "main.js": "/tailor-after-hours/static/js/main.5bc10054.js",
+    "main.css": "/tailor-after-hours/static/css/main.88cd8e1e.css",
+    "main.js": "/tailor-after-hours/static/js/main.aa6f55cd.js",
     "static/js/787.c58fa5e7.chunk.js": "/tailor-after-hours/static/js/787.c58fa5e7.chunk.js",
     "static/media/top-view-accessories.jpg": "/tailor-after-hours/static/media/top-view-accessories.aef85e55aea9541e3575.jpg",
     "static/media/top-view-of-seamstress-with-fabric-and-scissors.jpg": "/tailor-after-hours/static/media/top-view-of-seamstress-with-fabric-and-scissors.c9aec2bf332b00041e8e.jpg",
@@ -11,12 +11,12 @@
     "index.html": "/tailor-after-hours/index.html",
     "static/media/Heart.svg": "/tailor-after-hours/static/media/Heart.7a3a031ddd39c7cddf564cd668e710e1.svg",
     "static/media/Facebook.svg": "/tailor-after-hours/static/media/Facebook.814086cf179dd76100774793aaab11f0.svg",
-    "main.07a5772c.css.map": "/tailor-after-hours/static/css/main.07a5772c.css.map",
-    "main.5bc10054.js.map": "/tailor-after-hours/static/js/main.5bc10054.js.map",
+    "main.88cd8e1e.css.map": "/tailor-after-hours/static/css/main.88cd8e1e.css.map",
+    "main.aa6f55cd.js.map": "/tailor-after-hours/static/js/main.aa6f55cd.js.map",
     "787.c58fa5e7.chunk.js.map": "/tailor-after-hours/static/js/787.c58fa5e7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.07a5772c.css",
-    "static/js/main.5bc10054.js"
+    "static/css/main.88cd8e1e.css",
+    "static/js/main.aa6f55cd.js"
   ]
 }
