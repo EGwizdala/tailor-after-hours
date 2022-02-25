@@ -30,7 +30,7 @@ export function useFetch(url: any) {
 
 
 export async function getCategories() {
-    const url = "https://mighty-beyond-31038.herokuapp.com/api/categories";
+    const url = "http://mighty-beyond-31038.herokuapp.com/api/categories";
     try {
         const response = await fetch(url);
         const components = await response.json()
