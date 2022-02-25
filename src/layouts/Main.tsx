@@ -23,15 +23,15 @@ export const Main = () => {
             <Outlet /> 
             
                 {/* You can add a footer to get fancy in here :) */}
+                
           </>
         );
       }
 
     return (
         <Routes>
-            
             <Route path={`${ROUTE_PREFIX}`} element={<LayoutsWithNavbar />}>
-                <Route path={`${ROUTE_PREFIX}`} element={<Home />} />
+                <Route path={`/`} element={<Home />} />
                 <Route path="/oMnie" element={<AboutMe />} />
                 <Route path="/produkty" element={<Categories/>} />
                     <Route path="/produkty/:productType" element={<Products/>} />

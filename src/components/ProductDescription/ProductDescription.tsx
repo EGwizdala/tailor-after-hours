@@ -26,7 +26,8 @@ export const ProductDescription: React.FC<ProductDescriptionProps> = ({className
             <div className={`${className}__subtitle`}>{size}</div>
             <div className={`${className}__subtitle`}>Polecane materiały:</div>
             <div className={`${className}__subtitle--lowercase`}>{fabrics}</div>
-            <ButtonLink
+                <ButtonLink
+                    href = "/Kontakt"
                     className={className}
                     icon={
                         <GoogleIcon

@@ -54,7 +54,7 @@ export const HowToBuy= () => {
                 <ul className={`${className}__path`}>
                { buyerPath}
                 </ul>
-                <ButtonLink className={className} icon={east}>Masz pytania? Napisz</ButtonLink>
+                <ButtonLink  href = "/Kontakt" className={className} icon={east}>Masz pytania? Napisz</ButtonLink>
                 <SeeGallery className={`${className}__reference`}/>
             </article>
         </section>

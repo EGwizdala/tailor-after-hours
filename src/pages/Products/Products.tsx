@@ -26,7 +26,7 @@ export const Products = () => {
         <section id = "products">
             <Header imageSrc={backgroundHeader }/>
             <ProductList title={title} category={title}/>
-            <ButtonLink className={className} icon={east} >Zobacz materiały!</ButtonLink>
+            <ButtonLink  href = "" className={className} icon={east} >Zobacz materiały!</ButtonLink>
             <ProductCategoryList category={title} title="Pozostałe produkty" />
             
         </section>

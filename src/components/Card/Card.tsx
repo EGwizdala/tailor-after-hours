@@ -27,7 +27,7 @@ export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subt
             <div className={`${className}__description`} >
                 <div className={`${className}__subtitle`}>{subtitle}</div>
                 <Link className={`${className}__link`} to={`/produkty/${productType}/${productId}`}> 
-                    <ButtonLink className={className} icon={<GoogleIcon className={className} icon={icon} />}>{buttonText}</ButtonLink>
+                    <ButtonLink href = "" className={className} icon={<GoogleIcon className={className} icon={icon} />}>{buttonText}</ButtonLink>
                 </Link>
             </div>
         </div>

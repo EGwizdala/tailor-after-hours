@@ -36,7 +36,7 @@ export const AboutMe = () => {
                 <h1 className={`${className}__header`}>O mnie</h1>
                 <h2 className={`${className}__subtitle`}>Szycie to moja pasja! </h2>
                 <p className={`${className}__paragraph`}>Cześć! Jestem Ewa, księgowa z zawodu. Na tej stronie dzielę się z Tobą, tym co tworzę po godzinach pracy. Zapraszam do galerii moich prac krawieckich. Znajdziesz tu jakościowe materiały skrojone w fantastyczne formy odzieży, wykonane z dbałością o każdy szczegół.</p>
-                <ButtonLink className={className} icon={east}>Masz pytania? Napisz</ButtonLink>
+                <ButtonLink  href = "/Kontakt" className={className} icon={east}>Masz pytania? Napisz</ButtonLink>
                 <SeeGallery className={`${className}__reference`}/>
             </article>
         </section>
