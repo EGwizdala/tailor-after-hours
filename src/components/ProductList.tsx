@@ -20,7 +20,7 @@ export const ProductList: React.FC<ProductListProps> = ({ title, category }) => 
   
   const [productLoading, productError, productData] = useFetch(
         productCategory
-          ? `http://mighty-beyond-31038.herokuapp.com/api/categories/${productCategory.toLowerCase()}/items`
+          ? `https://mighty-beyond-31038.herokuapp.com/api/categories/${productCategory.toLowerCase()}/items`
           : null,
   )
     console.log(productData ? productData : "brak danych")

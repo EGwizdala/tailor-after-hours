@@ -30,7 +30,7 @@ export const Product= () => {
     
         const [productLoading, productError, productData] = useFetch(
             productId
-              ? `http://mighty-beyond-31038.herokuapp.com/api/items/${productId}`
+              ? `https://mighty-beyond-31038.herokuapp.com/api/items/${productId}`
               : null,
       )
     console.log(productData ? productData[0].description : "brak danych");
