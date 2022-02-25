@@ -1,4 +1,4 @@
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter, HashRouter} from 'react-router-dom';
 import { Main } from './Main';
 import { Footer } from './Footer/Footer';
 
@@ -8,10 +8,10 @@ function App() {
  
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
           <Main/>   
           <Footer />
-        </BrowserRouter>
+        </HashRouter>
       </div>
   );
 }
