@@ -13,6 +13,8 @@ import backgroundHeader from "../../images/top-view-of-seamstress-with-fabric-an
 
 
 
+
+
 export const Products = () => {
     const east = <span className="material-icons-outlined">
         east
@@ -26,7 +28,7 @@ export const Products = () => {
         <section id = "products">
             <Header imageSrc={backgroundHeader }/>
             <ProductList title={title} category={title}/>
-            <ButtonLink  href = "" className={className} icon={east} >Zobacz materiały!</ButtonLink>
+            <ButtonLink href = "" className={className} icon={east} >Zobacz materiały!</ButtonLink>
             <ProductCategoryList category={title} title="Pozostałe produkty" />
             
         </section>
