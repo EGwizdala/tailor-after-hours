@@ -25,7 +25,7 @@ export const Products = () => {
     
 
     return (
-        <section id = "products">
+        <section id = "products" className = {className}>
             <Header
                 imagePosition="center -150px"
                 imageSrc={backgroundHeader} />

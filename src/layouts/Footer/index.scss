@@ -2,6 +2,7 @@
 @import "../../styles/_variables";
 
 .footer {
+  
   @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
   height: $footer-height;
   background-color: $midnightblue;

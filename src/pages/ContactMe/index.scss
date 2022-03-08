@@ -3,23 +3,35 @@
     
 .contactMe{
     @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: flex-start, $gap-x: 0, $gap-y: 182px);
-    height: $main-height;
-    
+    height: auto;
+    & > header {
+        width: 100%;
+    }
     
     &__header {
         @include flex(1, 0, 100%);
         @include title-font;
+      
     }
     &__article {
         max-width: 480px;
+        height: $main-height;
         @include flex(0, 0, 50%);
         @include paragraph-font;
-        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: flex-start, $gap-x: 20px, $gap-y: 16px);
-
-
+        @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: flex-start, $align-items: flex-start, $gap-x: 20px, $gap-y: 16px);
+        & > * {
+            @include flex(0, 1, 25%);
+        }
+        @include tablet {
+            height: 25vh;    
+        }
+        @include mobile {
+            height: auto;    
+        }
     }
+
     &__contact-detail {
-        @include flex(0, 0, 100%);
+        @include flex(0, 0, 10%);
         align-self: flex-start;
         cursor: pointer;
         &:hover{
@@ -28,6 +40,7 @@
     }
     &__button {
         max-width: 40px;
+        margin-right: 24px;
     }
     &__button svg path{
         fill: $midnightblue;

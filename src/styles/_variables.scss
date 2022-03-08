@@ -8,7 +8,7 @@ $screen-height: 100vh;
 $nav-height: 88px;
 $footer-height: 88px;
 $header-height: calc(280px + $nav-height);
-$main-height: calc($screen-height - $header-height - $footer-height);
+
 
 
 $header-font:'Tenor Sans', sans-serif;
@@ -21,6 +21,8 @@ $quote: #{$font-size * 2.5};
 $large-body: #{$font-size * 2};
 $body: #{$font-size * 1.6};
 $secondary-body: #{$font-size * 1.28};
+
+$main-height: calc($screen-height - $header-height - $footer-height - $headline - 91px);
 
 
 $midnightblue: #14213d;

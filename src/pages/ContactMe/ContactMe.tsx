@@ -12,7 +12,7 @@ export const ContactMe = () => {
     const className = "contactMe";
 
     return (
-        <section id = {className} >
+        <section id = {className}  className = {className}>
             <Header
                 backgroundSize="150%"
                 imagePosition="center 80px"
@@ -28,7 +28,8 @@ export const ContactMe = () => {
                 <article className={`${className}__article`}>
                     <a href = "mailto:krawcowa@pogodzinach.com" className={`${className}__contact-detail`}>krawcowa@pogodzinach.com</a>
                     <a href="tel:500 600 700" className={`${className}__contact-detail`}>500 600 700</a>
-                    <Social className={`${className}`}/>
+                    <div className={`${className}__contact-detail`}><Social className={`${className}`}/></div>
+                    
                 </article>
                 
             </article>

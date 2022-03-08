@@ -5,14 +5,17 @@
 .card {
     @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
     background-color: $image-background;
-    width: 334px;
-    height: 334px;
+    width: 481px;
+    height: 482px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    @include mobile {
-        width: 312px;
-        height: 312px;
+    @include tablet {
+        margin: 0 20%;
     }
+    @include mobile {
+        width: 328px;
+    }
+   
     &__image {
         background-size: cover;
         background-position: center;
@@ -21,7 +24,7 @@
     }
     &__description {
         width: inherit;
-        @include flex (0, 0, 138px);
+        @include flex (0, 0, 133px);
         background-color: $midnightblue;
         color: $white; 
         font-size: $body;
@@ -31,9 +34,12 @@
     }
     &__subtitle {
         width: 100%;
+        @include flex (0, 0, 50%);
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 0, $gap-y: 0)
     }
     &__link {
         width: 100%;
+        @include flex (0, 0, 50%);
     }
     &__button {
         width: 100%;
@@ -50,8 +56,6 @@
         transform: translateY(-10px);
     }
 }
-// .material-icons-outlined {
-//     font-size: calc($quote * 2);
-// }
+
 
     
