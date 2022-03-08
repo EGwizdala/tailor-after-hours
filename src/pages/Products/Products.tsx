@@ -9,7 +9,7 @@ import { ProductCategoryList } from '../../components/ProductCategoryList';
 
 import './index.scss';
 
-import backgroundHeader from "../../images/top-view-of-seamstress-with-fabric-and-scissors.jpg";
+import backgroundHeader from "../../images/high-angle-of-seamstress-with-fabrics-and-scissors.jpg";
 
 
 
@@ -26,7 +26,9 @@ export const Products = () => {
 
     return (
         <section id = "products">
-            <Header imageSrc={backgroundHeader }/>
+            <Header
+                imagePosition="center -150px"
+                imageSrc={backgroundHeader} />
             <ProductList title={title} category={title}/>
             <ButtonLink href = "" className={className} icon={east} >Zobacz materiały!</ButtonLink>
             <ProductCategoryList category={title} title="Pozostałe produkty" />

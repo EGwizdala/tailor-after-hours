@@ -1,0 +1,19 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+    
+
+.loading {
+    @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 5px, $gap-y: 0);
+    &__image {
+       width: 600px;
+       height: auto; 
+    }
+    &__alt {
+        color: $late;
+    }
+    &__text {
+        margin-top: 50px;
+        font-size: $large-body;
+        text-transform: uppercase;
+    }
+}

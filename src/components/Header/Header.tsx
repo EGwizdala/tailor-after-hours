@@ -4,11 +4,15 @@ import './index.scss'
 
 interface HeaderProps {
     imageSrc: string
+    imagePosition?: string
+    backgroundSize?: string
 }
 
-export const Header: React.FC<HeaderProps> = ({ imageSrc }) => {
+export const Header: React.FC<HeaderProps> = ({ imageSrc, imagePosition, backgroundSize }) => {
     const headerStyle = {
-        backgroundImage: 'url('+imageSrc+')',
+        backgroundImage: 'url(' + imageSrc + ')',
+        backgroundPosition: `${imagePosition}`,
+        backgroundSize: `${backgroundSize}`
       };
 
     return (

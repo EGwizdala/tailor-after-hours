@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { ButtonLink } from '../Button/ButtonLink';
 import { GoogleIcon } from '../GoogleIcon';
 import "./index.scss";
@@ -15,15 +15,23 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subtitle, productId, productType}) => {
     
-    const className = "card"
-    const icon = "arrow_forward"
+    const className = "card";
+    const icon = "arrow_forward";
+
+    const div = <div className={`${className}__image`}
+        style={{
+            backgroundColor:"red"}}></div>
     return (
         <div className={className}>
+            <LazyLoadComponent
+                delayTime="500">
             <div
                 className={`${className}__image`}
                 style={{
                 backgroundImage: `url(${process.env.PUBLIC_URL}/images/clothes/${imageName}.${fileType})`}}>
-            </div>
+                </div>
+            </LazyLoadComponent>
+            
             <div className={`${className}__description`} >
                 <div className={`${className}__subtitle`}>{subtitle}</div>
                 <div className={`${className}__link`} > 

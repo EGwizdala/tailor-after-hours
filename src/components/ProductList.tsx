@@ -2,6 +2,8 @@ import { Outlet, useParams } from "react-router-dom";
 
 import { CardListElement } from './CardListElement/CardListElement';
 import { Card } from './Card/Card';
+import { PageLoading } from './PageLoading/PageLoading';
+import { PageError } from './PageError/PageError';
 import { useFetch } from '../data/data';
 
 
@@ -23,15 +25,15 @@ export const ProductList: React.FC<ProductListProps> = ({ title, category }) => 
           ? `http://mighty-beyond-31038.herokuapp.com/api/categories/${productCategory.toLowerCase()}/items`
           : null,
   )
-    console.log(productData ? productData : "brak danych")
   
     if (productLoading) {
-      console.log('loading...') 
+      return <PageLoading />
     }
     if (productError) {
-      console.log('error...') 
+      return <PageError />
     }  
   
+ 
     const cardListDisplay = productData ? productData.map((product: any) => {
         return (
            <Card
@@ -45,9 +47,9 @@ export const ProductList: React.FC<ProductListProps> = ({ title, category }) => 
                 />
         
             )
-    }) : <>strona się ładuje </>;
+    }) : null;
    
-    return (
+  return (
         <CardListElement
             className={className}
             title={title}

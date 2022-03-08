@@ -14,6 +14,8 @@ export const ContactMe = () => {
     return (
         <section id = {className} >
             <Header
+                backgroundSize="150%"
+                imagePosition="center 80px"
                 imageSrc={backgroundHeader} />
             <article className = {className}>
               

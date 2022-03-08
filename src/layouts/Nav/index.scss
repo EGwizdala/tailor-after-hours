@@ -3,7 +3,7 @@
 
 .navigation {
   @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: space-between,$align-items: center, $gap-x: 0, $gap-y: 0);
-  height: 82px;
+  height: $nav-height;
   text-transform: uppercase;
   background-color: $midnightblue;
   color: $white;

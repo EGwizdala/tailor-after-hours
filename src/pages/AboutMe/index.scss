@@ -5,51 +5,114 @@
     display: grid;
     grid-template-columns: 0.4fr 0.6fr;
     grid-template-rows: auto;
-    grid-template-areas: "header header" "image subtitle" "image paragraph" "image button" "reference reference";
+    grid-template-areas: "header header" "image subtitle" "image paragraph" ". button" "reference reference";
+    column-gap: 10px;
     justify-items: center;
     align-items: center;
-    margin: 50px 0;
+    @include tablet {
+        grid-template-columns: 0.3fr 0.7fr;
+       
+
+    }
+    @include mobile {
+        // grid-template-columns: 5% auto auto 5%;
+        // grid-template-areas: "header header header" ". subtitle . " ". paragraph ." " . button ." "reference reference reference" ;
+        // row-gap: 34px;
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 34px, $gap-y: 0);
+    }
     
     &__image {
         grid-area: image;
         @include imageCircle;
         @include background-image-settings(scroll, 200%);
         overflow: hidden;
+        @include tablet {
+            height: 200px;
+            width: 200px;
+        }
+        @include mobile {
+            grid-area: image;
+            height: 32px;
+            width: 32px;
+            order: 2;
+            
+        }
         
     }
     &__header {
         grid-area: header;
         @include title-font;
+        @include mobile {
+            font-size: $title;
+            padding: 53px 0 61px 0;
+            order: 1;
+            @include flex (0, 0, 100%)
+        }
     }
     &__subtitle {
         grid-area: subtitle;
         justify-self: start;
         @include subtitle-font;
+        @include tablet {
+            font-size: $quote;
+        }
+        @include mobile {
+            font-size: $quote;
+            order: 3;
+            @include flex (0, 0, 45%)
+        }
     }
     &__paragraph {
         grid-area: paragraph;
         width: 60%;
-        max-width: 626px;
+        max-width: 604px;
         justify-self: start;
-        @include paragraph-font
+        @include paragraph-font;
+        @include tablet {
+            width: 90%;
+            max-width: none;
+            font-size:$body ;
+        }
+        @include mobile {
+            @include flex (0, 0, 90%);
+            font-size:$body ;
+            max-width: none;
+            order: 4;
+        }
     }
     &__button {
         grid-area: button;
-        justify-self: end;
-        margin-right: 10%;
-        font-size: $large-body;
+        justify-self: center;
+        font-size: $body;
         padding-top: 6px;
         padding-bottom: 6px;
         &:hover{
             @include button-hover
         }
+        @include tablet {
+            justify-self: flex-end;
+            margin-right: 5%;
+        }
+        @include mobile {
+            @include flex (0, 0, 90%);
+            font-size:$body;
+            order: 5;
+        }
     }
     &__reference {
         grid-area: reference;
+        @include mobile {
+            order: 6;
+            @include flex (0, 0, 90%);
+        }
         &__header {
             @include flex(1, 0 , 100%);
             @include title-font;
             margin-bottom: 0;
+            @include mobile {
+                font-size: $title;
+                @include flex(0, 0 , 70%);
+            }
         }
     }      
 }

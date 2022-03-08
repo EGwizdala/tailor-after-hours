@@ -10,8 +10,9 @@ interface SocialProps {
 export const Social:React.FC<SocialProps> = ({className}) => {
     return (
         <>
-            <a className={`${className}__button social`} href=""><Instagram /></a>
-            <a className={`${className}__button social`} href=""><Facebook /></a>
+            <a className={`${className}__button social`} href="https://www.instagram.com"><Facebook /></a>
+            <a className={`${className}__button social`} href="https://www.facebook.com/"><Instagram /></a>
+            
             
         </>
     )

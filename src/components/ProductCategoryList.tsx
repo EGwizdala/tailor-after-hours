@@ -6,6 +6,8 @@ import { ImageWithButton } from './ImageWithButton';
 
 import { getCategories } from '../data/data';
 
+
+
 interface ProductCategoryListProps {
     title: string  | any
     category: string | any
@@ -14,9 +16,7 @@ interface ProductCategoryListProps {
 export const ProductCategoryList: React.FC<ProductCategoryListProps> = ({ title, category}) => {
     const [categories, setCategories] = useState<any[]>([]);
    
-    
     const className = "cardList";
-
     const scrollTop = function() {
         window.scrollTo(0, 0);
     };
@@ -46,7 +46,8 @@ export const ProductCategoryList: React.FC<ProductCategoryListProps> = ({ title,
     });
 
     return (
-        <CardListElement className={className} category={category} title = {title}>
+        <CardListElement className={className} category={category} title={title}>
+            
             {cardListDisplay}
             <Outlet/>
         </CardListElement>

@@ -1,6 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-
 
 export function useFetch(url: any) {
     const [data, setData] = React.useState<any>()

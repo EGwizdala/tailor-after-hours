@@ -22,8 +22,8 @@ export const ProductDescription: React.FC<ProductDescriptionProps> = ({className
             </nav>
             <h1 className={`${className}__header`}>{productName}</h1>
             <div className={`${className}__subtitle--lowercase`}>{subname} </div>
-            <div className={`${className}__subtitle`} >{category}</div>
-            <div className={`${className}__subtitle`}>{size}</div>
+                <div className={`${className}__subtitle`} >{category}</div>
+            <div className={`${className}__subtitle`}>Rozmiar: <span>{size}</span></div>
             <div className={`${className}__subtitle`}>Polecane materiały:</div>
             <div className={`${className}__subtitle--lowercase`}>{fabrics}</div>
                 <ButtonLink

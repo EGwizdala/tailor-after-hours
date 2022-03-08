@@ -2,7 +2,6 @@ import React from 'react'
 
 import { CardListElement } from './CardListElement/CardListElement';
 import { ImageWithButton } from './ImageWithButton';
-import { ReactComponent as Heart } from '../svg/Heart.svg';
 
 import { getItemCategories } from '../data/api';
 

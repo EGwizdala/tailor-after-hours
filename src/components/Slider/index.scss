@@ -1,5 +1,6 @@
 @import "../../styles/_mixins";
 @import "../../styles/_variables";
+@import "~react-image-gallery/styles/css/image-gallery.css";
     
 .slider{
     width: 100%;
@@ -16,10 +17,26 @@
     &__image {
         @include background-image-settings($background-attachment: scroll, $background-size: cover);
         height: 442px;
-        width: $image-width;
+        width: 80%;
     }
 }
     
+.image-gallery-slide .image-gallery-image {
+    height: 442px;
+    width: $image-width;
+}
+
+.image-gallery-left-nav {
+    left: -70px;
+    
+}
+
+.image-gallery-right-nav {
+    right: -70px;
+}
    
+.image-gallery-svg {
+    stroke: $defaultButtonColor;
+}
     
     

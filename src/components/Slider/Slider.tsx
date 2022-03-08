@@ -1,5 +1,6 @@
 import React from 'react';
-import { GoogleIcon } from '../../components/GoogleIcon';
+import ImageGallery from 'react-image-gallery';
+import { isEmptyBindingElement } from 'typescript';
 
 import './index.scss'
 
@@ -9,27 +10,82 @@ interface SliderProps {
     fileType: string
 }
 
+
+
 export const Slider: React.FC<SliderProps> = ({className, imageName, fileType}) => {
 
-    const sliderClassName = "slider"
+    const sliderClassName = "slider";
+
+    const imagesCount = 3;
+    const emptyImage:any = []
+
+    function checkIfImageExists(url, callback) {
+        const img = new Image();
+        img.src = url;
+        
+        if (img.complete) {
+          callback(true);
+        } else {
+          img.onload = () => {
+            callback(true);
+          };
+          
+          img.onerror = () => {
+            callback(false);
+          };
+        }
+      }
+    const pushImages = () => {
+        for (let i = 1; i <= imagesCount; i++) {
+            checkIfImageExists(`${process.env.PUBLIC_URL}/images/clothes/${imageName}_${i}.${fileType}`, (exists) => {
+                if (exists) {
+                    console.log('Image exists. ');
+                    emptyImage.push(
+                        {
+                            original: `${process.env.PUBLIC_URL}/images/clothes/${imageName}_${i}.${fileType}`,
+                        },
+                    )
+                    
+                } else {
+                    console.error('Image does not exists.')
+                }
+            });
+        }
+    };
+
+    pushImages();
+    console.log(emptyImage)
+    
+    const images = [
+        {
+          original: `${process.env.PUBLIC_URL}/images/clothes/${imageName}_1.${fileType}`,
+        },
+        {
+            original: `${process.env.PUBLIC_URL}/images/clothes/${imageName}_2.${fileType}`,
+        },
+        {
+            original: `${process.env.PUBLIC_URL}/images/clothes/${imageName}_3.${fileType}`,
+        },
+    ];
+    
+   console.log(images)
+  
+  
+  // USAGE
+  checkIfImageExists(`${process.env.PUBLIC_URL}/images/clothes/${imageName}_1.${fileType}`, (exists) => {
+    if (exists) {
+      console.log('Image exists. ')
+    } else {
+      console.error('Image does not exists.')
+    }
+  });
+    
     
     return (
         <div className={`${className}__slider ${sliderClassName}`} >
-            <GoogleIcon
-                icon="arrow_back_ios_new"
-            className={sliderClassName}
-            />
-            <div className={`${sliderClassName}__image`}  style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/images/clothes/${imageName}.${fileType})`}} >
-            {/* <img
-                src={images.article}
-                alt="female tailor with the sewing machine"></img> */}
-                {/* <a href='https://pl.freepik.com/zdjecia/kobieta'>Kobieta zdjęcie utworzone przez freepik - pl.freepik.com</a> */}
-            </div>
-            <GoogleIcon
-                icon="arrow_forward_ios"
-                className={sliderClassName}
-            />
+           
+            <ImageGallery className={`${sliderClassName}__image`} showThumbnails={false} showFullscreenButton={false} showPlayButton={false }items={emptyImage} />
+          
         </div>
     )
 }

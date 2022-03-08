@@ -2,7 +2,7 @@
 @import "../../styles/_variables";
     
 .cardList{
-    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 20px, $gap-y: 20px);
+    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 24px, $gap-y: 24px);
     margin-bottom: 50px;
     &__header {
         @include flex(1, 0, 100%);

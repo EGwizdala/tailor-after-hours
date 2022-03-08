@@ -19,19 +19,18 @@ export const AboutMe = () => {
 
     const articleImageStyle = {
         backgroundImage: `url(${backgroundArticle})`,
+        backgroundPosition: "50% 0px",
+        backgroundSize: "100%",
       };
 
     return (
 
         <section id = "aboutMe" >
             <Header
-                imageSrc={backgroundHeader} />
+                imagePosition="50% -250px"
+                imageSrc={backgroundHeader}/>
             <article className = {className}>
                 <div className={`${className}__image`} style = {articleImageStyle} >
-                    {/* <img
-                        src={images.article}
-                        alt="female tailor with the sewing machine"></img> */}
-                    {/* <a href='https://pl.freepik.com/zdjecia/kobieta'>Kobieta zdjęcie utworzone przez freepik - pl.freepik.com</a> */}
                 </div>
                 <h1 className={`${className}__header`}>O mnie</h1>
                 <h2 className={`${className}__subtitle`}>Szycie to moja pasja! </h2>

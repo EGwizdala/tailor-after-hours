@@ -5,10 +5,14 @@
 .card {
     @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
     background-color: $image-background;
-    width: 481px;
-    height: 482px;
+    width: 334px;
+    height: 334px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    @include mobile {
+        width: 312px;
+        height: 312px;
+    }
     &__image {
         background-size: cover;
         background-position: center;
