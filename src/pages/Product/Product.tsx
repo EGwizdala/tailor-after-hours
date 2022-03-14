@@ -7,6 +7,8 @@ import { Slider } from '../../components/Slider/Slider';
 import { ProductDescription } from '../../components/ProductDescription/ProductDescription';
 import { PageLoading } from '../../components/PageLoading/PageLoading';
 import { PageError } from '../../components/PageError/PageError';
+import { Breadcrumbs } from '../../components/Breadcrumbs';
+
 
 import backgroundHeader  from "../../images/back-view-of-female-tailor-with-patterns-in-hands.jpg";
 
@@ -24,7 +26,6 @@ export const Product= () => {
               ? `http://mighty-beyond-31038.herokuapp.com/api/items/${productId}`
               : null,
       )
-    console.log(productData ? productData[0].description : "brak danych");
 
     const product = productData ? productData[0] : "brak danych";
       
@@ -41,6 +42,8 @@ export const Product= () => {
                 imageSrc={backgroundHeader}
             />
             <article className={className}>
+            <nav className={`${className}__nav`}><Breadcrumbs product={product.name} category={product.category} id={product.id}/>
+            </nav>
                 <Slider
                     className={className}
                     imageName={`${product.category}_${product.id}`}

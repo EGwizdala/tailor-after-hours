@@ -1,6 +1,5 @@
 import { ButtonLink } from '../../components/Button/ButtonLink';
 import { GoogleIcon } from '../../components/GoogleIcon';
-import {Breadcrumbs} from '../Breadcrumbs'
 
 import './index.scss';
 
@@ -18,8 +17,7 @@ export const ProductDescription: React.FC<ProductDescriptionProps> = ({className
     return (
         <>
         <div className={`${className}__container`}>
-                <nav className={`${className}__nav`}><Breadcrumbs product={productName}category={category} id={id}/>
-            </nav>
+                
             <h1 className={`${className}__header`}>{productName}</h1>
             <div className={`${className}__subtitle--lowercase`}>{subname} </div>
                 <div className={`${className}__subtitle`} >{category}</div>

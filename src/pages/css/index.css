@@ -1,10 +1,27 @@
 .products {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 0;
+}
+
+.products > header {
+  width: 100%;
 }
 
 .products__button {
-  position: absolute;
-  right: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   min-width: 260px;
   max-width: 300px;
   font-size: 20px;
@@ -15,12 +32,32 @@
   border-radius: 4px;
   text-transform: none;
   padding: 6px 16px;
-  margin-right: 5%;
+  margin: 48px 5% 48px 0;
 }
 
 .products__button:hover {
   background-color: #C5AD8F;
   -webkit-box-shadow: 0px 2px 2px #00000029;
           box-shadow: 0px 2px 2px #00000029;
+}
+
+@media (min-width: 744px) and (max-width: 1439px) {
+  .products__button {
+    font-size: 16px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 743px) {
+  .products__button {
+    min-width: 90%;
+    max-width: 90%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0 0 48px 0;
+    font-size: 16px;
+    height: 56px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

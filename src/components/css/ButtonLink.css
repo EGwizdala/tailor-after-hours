@@ -25,10 +25,4 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
 }
-
-.buttonLink:hover {
-  background-color: #C5AD8F;
-  -webkit-box-shadow: 0px 2px 2px #00000029;
-          box-shadow: 0px 2px 2px #00000029;
-}
 /*# sourceMappingURL=ButtonLink.css.map */

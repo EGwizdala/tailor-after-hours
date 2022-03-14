@@ -2,12 +2,11 @@
 @import "../../styles/_variables";
 
 .footer {
-  
-  @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
+  @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 0, $gap-y: 0);
   height: $footer-height;
   background-color: $midnightblue;
   color: $white;
-  padding: map-get($padding, 'main-side');
+  padding: 24px;
   position: relative;
   @include tablet {
     @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 0, $gap-y: 0);
@@ -20,33 +19,71 @@
 
 
   &__text{
-    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 5px);
+    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 0, $gap-y: 20px);
     font-size: $body;
     color:$late;
+    letter-spacing: 0.05em;
+    max-width: 1300px;
     & > * {
       display: inline-block;
+      cursor: pointer;
+      text-decoration: underline;
+      position: relative;
+      &::after {
+        content: "";
+        width: 2px;
+        height: 80%;
+        position: absolute;
+        background-color: $late;
+        transform: translate(50%, -50%);
+        right: -10px;
+        top: 50%;
+      }
+      &:hover {
+        color: $white;
+      }
+      &:first-child {
+        width: 100%;
+        cursor: default;
+        text-decoration: none;
+        &:hover {
+          color: $late;
+        }
+      };
+      &:first-child, &:last-child {
+        &::after {
+          content: none;
+        }
+      };
     }
+    
     @include tablet {
-      @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 0, $gap-y: 5px);
+      @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 0, $gap-y: 20px);
       font-size: $secondary-body;
+      width: 500px;
       & > * {
         &:first-child {
           flex-basis: 100%;
         };
         &:nth-child(3) {
-          @include flex(1, 0, 60%)
+          &::after {
+            content: none;
+          }
         };
        
       }
     }
-
     @include mobile {
-      @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 0, $gap-y: 5px);
-      font-size: $secondary-body;
-      width: 192px;
+      @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 2px, $gap-y: 0);
+      font-size: 12.5px;
+      width: 268px;
       & > * {
+        &::after {
+          content: none
+        }
         &:first-child {
           flex-basis: 100%;
+          
         }
       }
     }
@@ -56,5 +93,18 @@
     @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 24px);
     position: absolute;
     right: 64px;
+    & > * {
+      &:hover path {
+        fill: $late;
+      }
+    }
+    @include tablet {
+      @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 64px);
+      right: 32px;
+    }
+    @include mobile {
+      @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 38px, $gap-y: 0);
+      right: 32px;
+    }
   }
 }

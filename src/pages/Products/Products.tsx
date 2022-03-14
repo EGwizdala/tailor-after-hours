@@ -30,8 +30,9 @@ export const Products = () => {
                 imagePosition="center -150px"
                 imageSrc={backgroundHeader} />
             <ProductList title={title} category={title}/>
-            <ButtonLink href = "" className={className} icon={east} >Zobacz materiały!</ButtonLink>
+            <ButtonLink href = "/Kontakt" className={className} icon={east} >Masz pytania? Napisz!</ButtonLink>
             <ProductCategoryList category={title} title="Pozostałe produkty" />
+            <ButtonLink href = "" className={className} icon={east} >Zobacz materiały!</ButtonLink>
             
         </section>
     )

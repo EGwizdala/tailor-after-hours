@@ -5,35 +5,53 @@
 .slider{
     width: 100%;
     min-height: 442px;
-    @include flex-parent;
-    margin: 106px 0;
-    &__icon {
-        @include flex(1, 0, 0);
-        height: auto;
-        text-align: center;
-        font-size: 56px;
-        color: #707070;
+    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-end, $align-items: flex-end, $gap-x: 34px, $gap-y: 0);
+    padding-right: 90px;
+    @include tablet {
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 34px, $gap-y: 0);
+        padding-right: 0;
     }
-    &__image {
-        @include background-image-settings($background-attachment: scroll, $background-size: cover);
-        height: 442px;
-        width: 80%;
+    @include mobile {
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 34px, $gap-y: 0);
+        padding-right: 0;
+        width: 100%;
+        min-height: 215px;
+    }
+
+}
+
+.image-gallery {
+    height: 442px;
+    width: 614px;
+    @include tablet {
+        width: 100%;
+    }
+    @include mobile {
+        width: 100%;
+        height: 215px;
     }
 }
     
 .image-gallery-slide .image-gallery-image {
     height: 442px;
-    width: $image-width;
+    width: 614px;
+    @include tablet {
+        width: 100%;
+    }
+    @include mobile {
+        width: 100%;
+        height: 215px;
+    }
 }
 
-.image-gallery-left-nav {
-    left: -70px;
+// .image-gallery-left-nav {
+//     left: -70px;
     
-}
+// }
 
-.image-gallery-right-nav {
-    right: -70px;
-}
+// .image-gallery-right-nav {
+//     right: -70px;
+// }
    
 .image-gallery-svg {
     stroke: $defaultButtonColor;

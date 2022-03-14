@@ -1,6 +1,5 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
-import { isEmptyBindingElement } from 'typescript';
 
 import './index.scss'
 
@@ -17,7 +16,7 @@ export const Slider: React.FC<SliderProps> = ({className, imageName, fileType}) 
     const sliderClassName = "slider";
 
     const imagesCount = 3;
-    const emptyImage:any = []
+    const imageList:any = []
 
     function checkIfImageExists(url, callback) {
         const img = new Image();
@@ -34,15 +33,19 @@ export const Slider: React.FC<SliderProps> = ({className, imageName, fileType}) 
             callback(false);
           };
         }
-      }
+    }
+  
     const pushImages = () => {
         for (let i = 1; i <= imagesCount; i++) {
             checkIfImageExists(`${process.env.PUBLIC_URL}/images/clothes/${imageName}_${i}.${fileType}`, (exists) => {
                 if (exists) {
                     console.log('Image exists. ');
-                    emptyImage.push(
+                    imageList.push(
                         {
-                            original: `${process.env.PUBLIC_URL}/images/clothes/${imageName}_${i}.${fileType}`,
+                        original: `${process.env.PUBLIC_URL}/images/clothes/${imageName}_${i}.${fileType}`,
+                        originalAlt: `${imageName}_zdjęcie`,
+        
+        
                         },
                     )
                     
@@ -53,22 +56,7 @@ export const Slider: React.FC<SliderProps> = ({className, imageName, fileType}) 
         }
     };
 
-    pushImages();
-    console.log(emptyImage)
-    
-    const images = [
-        {
-          original: `${process.env.PUBLIC_URL}/images/clothes/${imageName}_1.${fileType}`,
-        },
-        {
-            original: `${process.env.PUBLIC_URL}/images/clothes/${imageName}_2.${fileType}`,
-        },
-        {
-            original: `${process.env.PUBLIC_URL}/images/clothes/${imageName}_3.${fileType}`,
-        },
-    ];
-    
-   console.log(images)
+  pushImages();
   
   
   // USAGE
@@ -83,8 +71,7 @@ export const Slider: React.FC<SliderProps> = ({className, imageName, fileType}) 
     
     return (
         <div className={`${className}__slider ${sliderClassName}`} >
-           
-            <ImageGallery className={`${sliderClassName}__image`} showThumbnails={false} showFullscreenButton={false} showPlayButton={false }items={emptyImage} />
+        <ImageGallery className={`${sliderClassName}__image`} showThumbnails={false} showFullscreenButton={false} showPlayButton={false} items={imageList} description={true}/>
           
         </div>
     )

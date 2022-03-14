@@ -15,7 +15,7 @@
     @include mobile {
         width: 328px;
     }
-   
+
     &__image {
         background-size: cover;
         background-position: center;
@@ -27,15 +27,16 @@
         @include flex (0, 0, 133px);
         background-color: $midnightblue;
         color: $white; 
-        font-size: $body;
+        font-size: $quote;
         text-transform: uppercase;
-        padding: map-get($padding , 'card' );
+        padding: map-get($padding , 'card-mobile' );
         @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 10px);
     }
     &__subtitle {
         width: 100%;
         @include flex (0, 0, 50%);
-        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 0, $gap-y: 0)
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: flex-end, $gap-x: 0, $gap-y: 0);
+        transition: all 0.3s ease 0s;
     }
     &__link {
         width: 100%;
@@ -43,17 +44,25 @@
     }
     &__button {
         width: 100%;
-        @include button( $padding-top-bottom: 0, $padding-left-right: 0,  $background-color: $midnightblue, $color: $white, $text-transform: uppercase, $font-size: $quote );
-        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: space-between, $align-items: center, $gap-x: 0, $gap-y: 0);
-            &:hover { 
-               color: $warm-gray;
-            }
+        @include button( $padding-top-bottom: 0, $padding-left-right: 0,  $background-color: $midnightblue, $color: $white, $text-transform: uppercase, $font-size: $body );
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: space-between, $align-items: flex-end, $gap-x: 0, $gap-y: 0);
+        transition: all 0.3s ease 0s;
+            
         }
     &__icon{
         font-size: calc($quote * 1.5);
+        
+    }
+   
+    &__link:hover{
+        color: $warm-gray;
     }
     &:hover {
         transform: translateY(-10px);
+        .card__description,  .card__button{
+            color: $warm-gray;
+        }
+       
     }
 }
 

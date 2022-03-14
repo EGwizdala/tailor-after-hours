@@ -46,10 +46,15 @@
             @include button( $padding-top-bottom: 12px, $padding-left-right: 12px,  $background-color: $defaultButtonColor, $color: $white, $text-transform: uppercase, $font-size: $secondary-body );
             transition: all 0.3s ease 0s;
             cursor: pointer;
+            @include tablet {
+                @include button( $padding-top-bottom: 16px, $padding-left-right: 16px,  $background-color: $defaultButtonColor, $color: $white, $text-transform: uppercase, $font-size: $body );
+            }
+            @include mobile {
+                @include button( $padding-top-bottom: 16px, $padding-left-right: 16px,  $background-color: $defaultButtonColor, $color: $white, $text-transform: uppercase, $font-size: $body );
+            }
             &:hover {
                background-color: $midnightblue; 
                box-shadow: $box-shadow;
-
             }
         }
     }

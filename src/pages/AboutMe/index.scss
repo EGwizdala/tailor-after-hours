@@ -59,7 +59,8 @@
         @include mobile {
             font-size: $quote;
             order: 3;
-            @include flex (0, 0, 45%)
+            @include flex (0, 0, 255px);
+            margin: 0 16px;
         }
     }
     &__paragraph {
@@ -97,6 +98,7 @@
             @include flex (0, 0, 90%);
             font-size:$body;
             order: 5;
+            height: 56px;
         }
     }
     &__reference {

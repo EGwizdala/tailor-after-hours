@@ -1,5 +1,4 @@
 import React from 'react'
-import { Outlet, Link, Route } from 'react-router-dom';
 
 import {Logo} from '../../components/Logo'
 import { Menu } from '../../components/Menu'

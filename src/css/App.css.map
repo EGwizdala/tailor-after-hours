@@ -2,7 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../layouts/App.scss"
+        "../layouts/App.scss",
+        "../styles/_variables.scss"
     ],
     "names": [],
     "file": "App.css"

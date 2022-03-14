@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter} from 'react-router-dom';
+import { HashRouter} from 'react-router-dom';
 import { Main } from './Main';
 import { Footer } from './Footer/Footer';
 
