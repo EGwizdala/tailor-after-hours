@@ -1,0 +1,103 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+    
+.material{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 0.2fr 4fr 3fr 0.2fr ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". . nav ." 
+    ". slider container ." 
+    ". headerSecondary . ." 
+    ". paragraph . .";
+    justify-items: start;
+    align-items: center;
+    margin-top: 48px;
+    @include tablet    {
+        grid-template-columns: 0.1fr 1fr 0.1fr ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        ". nav ." 
+        ". slider ." 
+        ". container ." 
+        ". headerSecondary ." 
+        ". paragraph .";
+        justify-items: center;
+        row-gap: 15px;
+    }
+    @include mobile    {
+        grid-template-columns: 0.05fr 1fr 0.05fr ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        ". nav ." 
+        ". slider ." 
+        ". container ." 
+        ". headerSecondary ." 
+        ". paragraph .";
+        justify-items: center;
+        row-gap: 15px;
+    }
+    
+    &__nav {
+        grid-area: nav;
+        font-size: $secondary-body;
+        margin-bottom: 32px;
+        cursor: pointer;
+        text-transform: uppercase;
+        @include tablet {
+            justify-self: start;
+        }
+        @include mobile {
+            justify-self: start;
+        }
+        
+    }
+ 
+    &__slider {
+        grid-area: slider;
+    }
+    &__container {
+        grid-area: container;
+    }
+    &__header--secondary {
+        grid-area: headerSecondary;
+        justify-self: start;
+        @include title-font;
+        margin-top: 110px;
+        margin-left: $margin-left;
+        margin-bottom: 32px;
+        @include tablet {
+            justify-self: start;
+            margin-left: 0;
+        }
+        @include mobile {
+            margin-top: 0px;
+            justify-self: start;
+            margin-left: 0;
+            margin-bottom: 0;
+            font-size: 25px;
+        }
+    }
+    &__paragraph {
+        grid-area: paragraph;
+        justify-self: start;
+        margin-left: $margin-left;
+        @include paragraph-font;
+        font-size: 25px;
+        margin-bottom: 112px;
+        @include tablet {
+            justify-self: start;
+            margin-left: 0;
+        }
+        @include mobile {
+            justify-self: start;
+            margin-left: 0;
+            font-size: 20px;
+        }
+
+    }
+   
+}
+    
+    

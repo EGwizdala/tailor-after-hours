@@ -1,34 +1,22 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import { getItemCategories } from '../../data/api';
-import { getCategories } from '../../data/data';
 import './index.scss'
 
 interface DropdownMenuProps {
-    style?: any
     classAnimation: string
+    categoriesList: any
+    categoryType: string
+
 }
 
-export const DropdownMenu: React.FC<DropdownMenuProps> = ({ style, classAnimation }) => {
+export const DropdownMenu: React.FC<DropdownMenuProps> = ({ classAnimation, categoriesList, categoryType }) => {
     const [categories, setCategories] = useState<any[]>([]);
     
     const className = "dropdown-menu";
     
-    const products = getItemCategories();
-
-    
-
-    useEffect(() => {
-        const categoriesdata = getCategories();
-
-        const printCategories = async () => {
-            const list = await categoriesdata;
-            setCategories(list);
-          };
-          printCategories();
  
-    }, [])
-    const category = categories.map((category) => <Link key = {category.name} className={`${className}__button`} to={`/produkty/${category.name}`} >{category.name}</Link>);
+
+    const category = categoriesList.map((category) => <Link key = {category.name || category.type} className={`${className}__button`} to={`/${categoryType}/${category.name || category.type}`} >{category.name || category.type}</Link>);
     return (
         <>
             <div className={`${className} ${classAnimation}`}>

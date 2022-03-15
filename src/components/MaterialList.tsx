@@ -44,7 +44,7 @@ export const MaterialList: React.FC<MaterialListProps> = ({ title, category }) =
                 imageName={`${product.category}_${product.id}_1`}
                 fileType="jpg"
                 buttonText={product.name}
-                subtitle={product.subname}
+                subtitle={product.grammage}
                 />
         
             )

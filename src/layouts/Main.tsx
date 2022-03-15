@@ -7,6 +7,7 @@ import { Categories } from '../pages/Categories';
 import { Product } from '../pages/Product/Product';
 import { MaterialCategories } from '../pages/MaterialCategories';
 import { Materials } from '../pages/Materials/Materials';
+import { Material } from '../pages/Material/Material';
 import { HowToBuy } from '../pages/HowToBuy/HowToBuy';
 import { ContactMe } from '../pages/ContactMe/ContactMe';
 
@@ -43,7 +44,7 @@ export const Main = () => {
 
                 <Route path="/materialy" element={<MaterialCategories />} />
                     <Route path="/materialy/:materialType" element={<Materials/>} />
-                        <Route path="/materialy/:materialType/:materialId" element={<Product />}/>
+                        <Route path="/materialy/:materialType/:materialId" element={<Material />}/>
                 <Route path="/jakKupowac" element={<HowToBuy />} />
                 <Route path="/Kontakt" element={<ContactMe />} />
                 <Route

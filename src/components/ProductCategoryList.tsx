@@ -22,7 +22,7 @@ export const ProductCategoryList: React.FC<ProductCategoryListProps> = ({ title,
     };
 
     useEffect(() => {
-        const categoriesdata = getCategories();
+        const categoriesdata = getCategories("http://mighty-beyond-31038.herokuapp.com/api/categories");
 
         const printCategories = async () => {
             const list = await categoriesdata;

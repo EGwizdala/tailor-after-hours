@@ -27,8 +27,8 @@ export function useFetch(url: any) {
   }
 
 
-export async function getCategories() {
-    const url = "http://mighty-beyond-31038.herokuapp.com/api/categories";
+export async function getCategories(url) {
+  
     try {
         const response = await fetch(url);
         const components = await response.json()
@@ -40,7 +40,7 @@ export async function getCategories() {
 }
 
 
-const categoriesdata = getCategories()
+const categoriesdata = getCategories("http://mighty-beyond-31038.herokuapp.com/api/categories")
 
 // const printCategories = async () => {
 //     const list = await categoriesdata;
