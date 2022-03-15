@@ -8,12 +8,12 @@ interface SeeGalleryProps {
 }
 
 export const SeeGallery: React.FC<SeeGalleryProps> = ({className}) => {
-    const listElements = ['Produkty', 'Materiały'];
+    const listElements = ['produkty', 'materiały'];
     const title = "zobacz galerię";
     const cardClassName = "cardList"
     const cardListDisplay = listElements.map((element) => {
         return (
-            <ImageWithButton className = {`${cardClassName}__card`} key={element} imageSrc={`${element}.svg`} productType= {element} buttonText={element}/>
+            <ImageWithButton category={element} className = {`${cardClassName}__card`} key={element} imageSrc={`${element}.svg`} productType= {element} buttonText={element}/>
             )
     });
 

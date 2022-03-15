@@ -36,12 +36,13 @@ export const ProductCategoryList: React.FC<ProductCategoryListProps> = ({ title,
     const cardListDisplay = categories.filter(product => product.name != category).map((product) => {
         return (
             <ImageWithButton
-                    onClick = {scrollTop}
-                    productType= {product.name}
-                    className={`${className}__card`}
-                    key={product.name}
-                    imageSrc={`${product.name}.svg`}
-                    buttonText={product.name} />
+                category = "produkty"
+                onClick = {scrollTop}
+                productType= {product.name}
+                className={`${className}__card`}
+                key={product.name}
+                imageSrc={`${product.name}.svg`}
+                buttonText={product.name} />
             )
     });
 

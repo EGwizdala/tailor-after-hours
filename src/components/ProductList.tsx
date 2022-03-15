@@ -36,7 +36,8 @@ export const ProductList: React.FC<ProductListProps> = ({ title, category }) => 
  
     const cardListDisplay = productData ? productData.map((product: any) => {
         return (
-           <Card
+          <Card
+                category = "produkty"
                 productType={productCategory}
                 productId = {product.id}
                 key={product.name}

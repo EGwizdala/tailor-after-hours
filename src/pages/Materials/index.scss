@@ -1,0 +1,39 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+    
+.materials{
+    @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
+    & > header {
+        width: 100%;
+    }
+    
+    &__button {
+        align-self: flex-end;
+        min-width: 260px;
+        max-width: 300px;
+        @include button ($padding-top-bottom: 6px, $padding-left-right: 16px,  $background-color: $defaultStateButtonColor, $color: $midnightblue, $text-transform: none, $font-size: $large-body );
+        margin: 48px 5% 48px 0;
+        &:hover {
+            background-color: $late; 
+            box-shadow: 0px 2px 2px #00000029;
+            
+        } 
+        @include tablet {
+            font-size:$body;
+            height: 56px;
+        }
+        @include mobile {
+            min-width: 90%;
+            max-width: 90%;
+            align-self: center;
+            margin: 0 0 48px 0;
+            font-size:$body;
+            height: 56px;
+        }
+
+        
+    }
+   
+}
+    
+    

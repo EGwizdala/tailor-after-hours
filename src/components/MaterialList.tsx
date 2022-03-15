@@ -1,26 +1,66 @@
-import React from 'react'
+import { Outlet, useParams } from "react-router-dom";
 
 import { CardListElement } from './CardListElement/CardListElement';
-import { ImageWithButton } from './ImageWithButton';
-import { ReactComponent as Heart } from '../svg/Heart.svg';
-import { getMaterialCategories } from '../data/api';
+import { Card } from './Card/Card';
+import { PageLoading } from './PageLoading/PageLoading';
+import { PageError } from './PageError/PageError';
+import { useFetch } from '../data/data';
 
-export const MaterialList = () => {
-    const imageSrc = 'material.png';
-    const materials = ['dostępne', 'chcesz swoje?'];
-    const className = "cardList";
-    const title = "Materiały";
 
-    const cardListDisplay = materials.map((material) => {
+
+interface MaterialListProps {
+  title: any
+  category: any
+}
+
+export const MaterialList: React.FC<MaterialListProps> = ({ title, category }) => {
+
+     const className = "cardList";
+     let params = useParams();
+     const materialCategory = params.materialType;
+  
+  
+  const [isLoading, isError, data] = useFetch(
+    materialCategory
+          ? `https://mighty-beyond-31038.herokuapp.com/api/types/${materialCategory.toLowerCase()}/fabrics`
+          : null,
+  )
+  
+    if (isLoading) {
+      return <PageLoading />
+    }
+    if (isError) {
+      return <PageError />
+    }  
+  
+ 
+    const cardListDisplay = data ? data.map((product: any) => {
         return (
-            <ImageWithButton productType= {material} className = {`${className}__card`} key={material} imageSrc={imageSrc} buttonText={material}/>
+          <Card
+                category = "materialy"
+                productType={materialCategory}
+                productId = {product.id}
+                key={product.name}
+                imageName={`${product.category}_${product.id}_1`}
+                fileType="jpg"
+                buttonText={product.name}
+                subtitle={product.subname}
+                />
+        
             )
-    });
-
-    return (
-        <CardListElement className={className} category={title} title={title} >
+    }) : null;
+   
+  return (
+        <CardListElement
+            className={className}
+            title={title}
+            category={category}
+        >
             {cardListDisplay}
+            <Outlet />
+            
         </CardListElement>
     )
 }
+
 

@@ -15,6 +15,7 @@ export const ProductList = () => {
     const cardListDisplay = products.map((product) => {
         return (
             <ImageWithButton
+                category = "produkty"
                 productType={product.name}
                 className={`${className}__card`}
                 key={product.name}

@@ -8,10 +8,11 @@ interface ImageWithButtonProps {
     buttonText: string
     className: string
     productType: any
+    category: string
     onClick?: (e: React.FormEvent<EventTarget>) => void
 }
 
-export const ImageWithButton: React.FC<ImageWithButtonProps> = ({ imageSrc, buttonText, className, children, productType, onClick}) => {
+export const ImageWithButton: React.FC<ImageWithButtonProps> = ({ imageSrc, buttonText, className, children, productType, category, onClick}) => {
     
     const backgroundStyle = {
         backgroundImage: `url('${process.env.PUBLIC_URL}/images/icons/${imageSrc}')`,
@@ -22,7 +23,7 @@ export const ImageWithButton: React.FC<ImageWithButtonProps> = ({ imageSrc, butt
             <LazyLoadComponent>
             <div style={backgroundStyle} className = {`${className}__image`}>{children}</div>
             </LazyLoadComponent>
-            <Link onClick = {onClick} to={productType === 'Produkty' ?  '/produkty' : `/produkty/${productType}`} className={`${className}__button`} >{buttonText}
+            <Link onClick = {onClick} to={productType === 'Produkty' ?  `/${category}` : `/${category}/${productType}`} className={`${className}__button`} >{buttonText}
             </Link>
         </div>
     )

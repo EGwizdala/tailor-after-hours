@@ -5,6 +5,8 @@ import { AboutMe } from '../pages/AboutMe/AboutMe';
 import { Products } from '../pages/Products/Products';
 import { Categories } from '../pages/Categories';
 import { Product } from '../pages/Product/Product';
+import { MaterialCategories } from '../pages/MaterialCategories';
+import { Materials } from '../pages/Materials/Materials';
 import { HowToBuy } from '../pages/HowToBuy/HowToBuy';
 import { ContactMe } from '../pages/ContactMe/ContactMe';
 
@@ -36,6 +38,12 @@ export const Main = () => {
                 <Route path="/produkty" element={<Categories/>} />
                     <Route path="/produkty/:productType" element={<Products/>} />
                         <Route path="/produkty/:productType/:productId" element={<Product />}/>
+                <Route path="/jakKupowac" element={<HowToBuy />} />
+
+
+                <Route path="/materialy" element={<MaterialCategories />} />
+                    <Route path="/materialy/:materialType" element={<Materials/>} />
+                        <Route path="/materialy/:materialType/:materialId" element={<Product />}/>
                 <Route path="/jakKupowac" element={<HowToBuy />} />
                 <Route path="/Kontakt" element={<ContactMe />} />
                 <Route

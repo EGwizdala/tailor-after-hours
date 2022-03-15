@@ -11,9 +11,10 @@ interface CardProps {
     subtitle: string
     productType: any
     productId: any
+    category: string
 }
 
-export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subtitle, productId, productType}) => {
+export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subtitle, productId, productType, category}) => {
     
     const className = "card";
     const icon = "arrow_forward";
@@ -22,7 +23,7 @@ export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subt
         style={{
             backgroundColor:"red"}}></div>
     return (
-        <Link to = {`/produkty/${productType}/${productId}`} className={className}>
+        <Link to = {`/${category}/${productType}/${productId}`} className={className}>
             <div
                 className={`${className}__image`}
                 style={{
@@ -32,7 +33,7 @@ export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subt
             <div className={`${className}__description`} >
                 <div className={`${className}__subtitle`}>{buttonText}</div>
                 <div className={`${className}__link`} > 
-                    <ButtonLink href = {`/produkty/${productType}/${productId}`} className={className} icon={<GoogleIcon className={className} icon={icon} />}>{subtitle}</ButtonLink>
+                    <ButtonLink href = {`/${category}/${productType}/${productId}`} className={className} icon={<GoogleIcon className={className} icon={icon} />}>{subtitle}</ButtonLink>
                 </div>
             </div>
         </Link>

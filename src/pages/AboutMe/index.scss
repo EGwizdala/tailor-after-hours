@@ -85,8 +85,8 @@
         grid-area: button;
         justify-self: center;
         font-size: $body;
-        padding-top: 6px;
-        padding-bottom: 6px;
+        padding-top: 16px;
+        padding-bottom: 16px;
         &:hover{
             @include button-hover
         }
