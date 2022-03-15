@@ -4,7 +4,7 @@ import { useFetch } from '../../data/data';
 
 import { Header } from '../../components/Header/Header';
 import { Slider } from '../../components/Slider/Slider';
-import { ProductDescription } from '../../components/ProductDescription/ProductDescription';
+import { MaterialDescription } from '../../components/MaterialDesctiption/MaterialDescription';
 import { PageLoading } from '../../components/PageLoading/PageLoading';
 import { PageError } from '../../components/PageError/PageError';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
@@ -13,6 +13,7 @@ import { Breadcrumbs } from '../../components/Breadcrumbs';
 import backgroundHeader  from "../../images/back-view-of-female-tailor-with-patterns-in-hands.jpg";
 
 import "./index.scss";
+
     
 
 export const Material= () => {
@@ -49,14 +50,13 @@ export const Material= () => {
                     imageName={`${product.category}_${product.id}`}
                     fileType = "jpg"
                 />
-                < ProductDescription
+                < MaterialDescription
                     id = {product.id}
                     className={className}
                     productName={product.name}
-                    subname={product.grammage}
+                    grammage={product.grammage}
                     category={product.category}
-                    size={product.grammage}
-                    fabrics={product.recommended}
+                    recommended={product.recommended}
                 />
                  <h2
             className={`${className}__header--secondary`}>

@@ -1,0 +1,91 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+    
+.material {
+    &__container {
+        height: 100%;
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: stretch, $gap-x: 0, $gap-y: 0);
+        @include tablet {
+            @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: stretch, $gap-x: 16px, $gap-y: 0);
+        }
+        @include mobile {
+            @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: stretch, $align-items: stretch, $gap-x: 16px, $gap-y: 0);
+            width: 100%
+        }
+    }
+    
+    &__header {
+        @include flex(1, 0, 100%);
+        @include title-font;
+        text-align: left;
+        padding: 0;
+        margin-bottom: 12px;
+        @include mobile {
+            font-size: 25px;
+        }
+    }
+    
+    &__subtitle {
+        @include flex(1, 0, 100%);
+        font-family: $header-font;
+        font-size: $quote;
+        color: $midnightblue;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        @include mobile {
+            font-size: 20px;
+        }
+        
+        &--lowercase {
+            @include flex(1, 0, 100%);
+            font-family: $header-font;
+            font-size: $quote;
+            color: $midnightblue;
+            text-transform: none;
+            margin-bottom: 56px;
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    &__subtitle:nth-of-type(2) {
+        margin-bottom: 46px;
+    };
+    
+    &__button {
+        @include flex(0, 0, auto);
+        min-width: 260px;
+        max-width: 300px;
+        font-size: $large-body;
+        padding-top: 6px;
+        padding-bottom: 6px;;
+        margin-right: 5%;
+        &:hover {
+            background-color: $late; 
+            box-shadow: 0px 2px 2px #00000029;
+            
+        } 
+        @include tablet {
+            height: 56px;
+        }
+        @include mobile {
+            height: 56px;
+            width: 100%;
+            margin-right: 0;
+            max-width: 744px;
+        }
+    }
+
+   
+    
+}
+
+
+.bredacrumbs {
+    &:hover {
+        color: $late;
+        text-decoration: underline;
+    }
+}
+    

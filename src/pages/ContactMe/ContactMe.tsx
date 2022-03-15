@@ -17,9 +17,10 @@ export const ContactMe = () => {
                 backgroundSize="150%"
                 imagePosition="center 80px"
                 imageSrc={backgroundHeader} />
-            <article className = {className}>
+            <h1 className={`${className}__header`}>Kontakt</h1>
+            <div className = {`${className}__container`}>
               
-                <h1 className={`${className}__header`}>Kontakt</h1>
+                
                 <article className={`${className}__article`}>
                     <p className={`${className}__paragraph`}>Masz pytania? Chcesz złożyć zamówienie? Zapraszam do kontaktu mailowego lub telefonicznego.</p>
                     <p className={`${className}__paragraph`}>Zapraszam również do śledzenia mnie na portalach społecznościowych! Dzięki temu będziesz na bieżąco z nowościami na stronie!</p>
@@ -32,7 +33,7 @@ export const ContactMe = () => {
                     
                 </article>
                 
-            </article>
+            </div>
         </section>
     )
     

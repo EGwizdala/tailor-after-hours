@@ -2,8 +2,14 @@
 @import "../../styles/_variables";
     
 .contactMe{
-    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: flex-start, $gap-x: 0, $gap-y: 182px);
+    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
     height: auto;
+    @include tablet {
+        margin-bottom: 24px;
+    }
+    @include mobile {
+        margin-bottom: 24px;
+    }
     & > header {
         width: 100%;
     }
@@ -11,31 +17,85 @@
     &__header {
         @include flex(1, 0, 100%);
         @include title-font;
+        margin-bottom: 33px;
       
     }
-    &__article {
-        max-width: 480px;
-        height: $main-height;
+    &__container {
         @include flex(0, 0, 50%);
+        @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 50px);
+        height: 70vh;
+        
+        @include tablet {
+            @include flex(0, 0, 70%);
+            @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
+            height: 40vh;
+        }
+        @include mobile {
+            @include flex(0, 0, 90%);
+            @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
+            height: 40vh;
+        }
+    }
+    &__article {
+        @include flex(1, 0, 100%);
         @include paragraph-font;
-        @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: flex-start, $align-items: flex-start, $gap-x: 20px, $gap-y: 16px);
+        @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: flex-start, $align-items: flex-start, $gap-x: 20px, $gap-y: 30px);
+        &:first-child {
+           width: 500px;
+           @include tablet {
+            order: 2;    
+            }
+            @include mobile{
+                order: 2; 
+                width: auto;   
+                }
+        }
+        &:last-child {
+            width: 250px; 
+            @include tablet {
+                order: 1;  
+                @include flex(0, 0, 250px);
+            }
+            @include mobile {
+                order: 1;  
+                @include flex(0, 0, 250px);
+            }
+        }
         & > * {
             @include flex(0, 1, 25%);
         }
         @include tablet {
-            height: 25vh;    
+            justify-content: center;
+            align-items: center;
+            @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: flex-start, $gap-x: 20px, $gap-y: 30px);
         }
         @include mobile {
-            height: auto;    
+            justify-content: center;
+            align-items: center;
+            @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: flex-start, $gap-x: 20px, $gap-y: 30px);
         }
+        
     }
 
     &__contact-detail {
         @include flex(0, 0, 10%);
-        align-self: flex-start;
         cursor: pointer;
         &:hover{
             color: $late
+        }
+        @include tablet {  
+            @include flex(1, 0, 100%); 
+        }
+        @include mobile {  
+            @include flex(1, 0, 100%); 
+        }
+    }
+    &__paragraph {
+        @include tablet {  
+            @include flex(1, 0, 100%); 
+        }
+        @include mobile {  
+            @include flex(1, 0, 100%); 
         }
     }
     &__button {
