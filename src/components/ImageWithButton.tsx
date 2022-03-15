@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 
 interface ImageWithButtonProps {
@@ -20,10 +19,8 @@ export const ImageWithButton: React.FC<ImageWithButtonProps> = ({ imageSrc, butt
 
     return (
         <div className={className}>
-            <LazyLoadComponent>
             <div style={backgroundStyle} className = {`${className}__image`}>{children}</div>
-            </LazyLoadComponent>
-            <Link onClick = {onClick} to={productType === 'Produkty' ?  `/${category}` : `/${category}/${productType}`} className={`${className}__button`} >{buttonText}
+            <Link onClick = {onClick} to={productType === 'produkty' || productType === 'materiały' ?  `/${category}` : `/${category}/${productType}`} className={`${className}__button`} >{buttonText}
             </Link>
         </div>
     )
