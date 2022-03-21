@@ -28,6 +28,19 @@
     font-size: $body;
     font-family: $nav-font;
     @include flex-parent(flex, row, no-wrap,center, center, 0, 45px);
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &--menu-hamburger {
+    display: none;
+    font-size: $body;
+    font-family: $nav-font;
+    @include flex-parent(flex, row, no-wrap,center, center, 0, 45px);
+    @include mobile {
+      display: static;
+    }
   }
   &--menu__button {
     @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: space-around,$align-items: center, $gap-x: 0, $gap-y: 10px);

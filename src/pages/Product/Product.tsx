@@ -45,6 +45,7 @@ export const Product= () => {
             <nav className={`${className}__nav`}><Breadcrumbs product={product.name} category={product.category} id={product.id}/>
             </nav>
                 <Slider
+                    category = "produkty"
                     className={className}
                     imageName={`${product.category}_${product.id}`}
                     fileType = "jpg"

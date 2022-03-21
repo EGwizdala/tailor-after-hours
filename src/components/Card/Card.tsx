@@ -12,9 +12,10 @@ interface CardProps {
     productType: any
     productId: any
     category: string
+    mainCategory: string
 }
 
-export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subtitle, productId, productType, category}) => {
+export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subtitle, productId, productType, category, mainCategory}) => {
     
     const className = "card";
     const icon = "arrow_forward";
@@ -27,7 +28,7 @@ export const Card: React.FC<CardProps> = ({imageName, fileType, buttonText, subt
             <div
                 className={`${className}__image`}
                 style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/images/clothes/${imageName}.${fileType})`}}>
+                backgroundImage: `url(${process.env.PUBLIC_URL}/images/${mainCategory}/${imageName}.${fileType})`}}>
             </div>
     
             <div className={`${className}__description`} >

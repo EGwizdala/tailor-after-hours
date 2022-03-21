@@ -3,7 +3,7 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
     
 .slider{
-    width: 100%;
+    width: 774px;
     min-height: 442px;
     @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-end, $align-items: flex-end, $gap-x: 34px, $gap-y: 0);
     padding-right: 90px;
@@ -44,14 +44,19 @@
     }
 }
 
-// .image-gallery-left-nav {
-//     left: -70px;
-    
-// }
+.image-gallery-left-nav {
+    left: -70px;
+    @include tablet {
+        left: 0;
+    }
+}
 
-// .image-gallery-right-nav {
-//     right: -70px;
-// }
+.image-gallery-right-nav {
+    right: -70px;
+    @include tablet {
+        right: 0;
+    }
+}
    
 .image-gallery-svg {
     stroke: $defaultButtonColor;

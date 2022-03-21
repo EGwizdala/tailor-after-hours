@@ -37,15 +37,16 @@ export const ProductList: React.FC<ProductListProps> = ({ title, category }) => 
     const cardListDisplay = productData ? productData.map((product: any) => {
         return (
           <Card
-                category = "produkty"
-                productType={productCategory}
-                productId = {product.id}
-                key={product.name}
-                imageName={`${product.category}_${product.id}_1`}
-                fileType="jpg"
-                buttonText={product.name}
-                subtitle={product.subname}
-                />
+              category="produkty"
+              mainCategory = "produkty"
+              productType={productCategory}
+              productId = {product.id}
+              key={product.name}
+              imageName={`${product.category}_${product.id}_1`}
+              fileType="jpg"
+              buttonText={product.name}
+              subtitle={product.subname}
+              />
         
             )
     }) : null;

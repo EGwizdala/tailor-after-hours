@@ -23,7 +23,7 @@
     &__container {
         @include flex(0, 0, 50%);
         @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 50px);
-        height: 70vh;
+        height: 50vh;
         
         @include tablet {
             @include flex(0, 0, 70%);
@@ -37,12 +37,12 @@
         }
     }
     &__article {
-        @include flex(1, 0, 100%);
+        @include flex(0, 0, 100%);
         @include paragraph-font;
-        @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: flex-start, $align-items: flex-start, $gap-x: 20px, $gap-y: 30px);
+        @include flex-parent($display: flex, $direction: column, $wrap: wrap, $justify-content: flex-start, $align-items: flex-start, $gap-x: 10px, $gap-y: 30px);
         &:first-child {
-           width: 500px;
-           @include tablet {
+            width: 500px;
+            @include tablet {
             order: 2;    
             }
             @include mobile{
