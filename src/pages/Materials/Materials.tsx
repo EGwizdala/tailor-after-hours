@@ -32,7 +32,7 @@ export const Materials = () => {
             <MaterialList title={title} category={title}/>
             <ButtonLink href = "/Kontakt" className={className} icon={east} >Masz pytania? Napisz!</ButtonLink>
             <MaterialCategoryList category={title} title="Pozostałe materiały" />
-            <ButtonLink href = "" className={className} icon={east} >Zobacz produkty!</ButtonLink>
+            <ButtonLink href = "/produkty" className={className} icon={east} >Zobacz produkty!</ButtonLink>
             
         </section>
     )

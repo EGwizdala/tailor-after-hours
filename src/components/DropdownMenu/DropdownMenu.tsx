@@ -21,10 +21,6 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({ classAnimation, cate
         <>
             <div className={`${className} ${classAnimation}`}>
             {category}
-            {/* <a className={`${className}--menu__button`} href="#products">Produkty {<GoogleIcon className={className} icon={icon}/>}</a>
-            <a className={`${className}--menu__button`} href="#materials">Materiały {<GoogleIcon className={className} icon={icon}/>}</a>
-            <a className={`${className}--menu__button`} href="#howToBuy">Jak kupować</a>
-            <a className={`${className}--menu__button`} href="#contact">Kontakt</a> */}
         </div>
         </>
     )

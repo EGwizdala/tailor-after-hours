@@ -32,7 +32,7 @@ export const Products = () => {
             <ProductList title={title} category={title}/>
             <ButtonLink href = "/Kontakt" className={className} icon={east} >Masz pytania? Napisz!</ButtonLink>
             <ProductCategoryList category={title} title="Pozostałe produkty" />
-            <ButtonLink href = "" className={className} icon={east} >Zobacz materiały!</ButtonLink>
+            <ButtonLink href = "/materialy" className={className} icon={east} >Zobacz materiały!</ButtonLink>
             
         </section>
     )

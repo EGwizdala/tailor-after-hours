@@ -34,7 +34,8 @@ export const MaterialList: React.FC<MaterialListProps> = ({ title, category }) =
     }  
   
  
-    const cardListDisplay = data ? data.map((product: any) => {
+  const cardListDisplay = data ? data.map((product: any) => {
+    console.log(product.category)
         return (
           <Card
                 category="materialy"

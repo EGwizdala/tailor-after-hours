@@ -6,7 +6,6 @@
   height: $nav-height;
   text-transform: uppercase;
   background-color: $midnightblue;
-  color: $white;
   padding: map-get($padding, 'main-side');
   position: fixed;
   width: 100vw;
@@ -25,23 +24,37 @@
     }
   }
   &--menu {
+    color: $white;
     font-size: $body;
     font-family: $nav-font;
-    @include flex-parent(flex, row, no-wrap,center, center, 0, 45px);
+    @include flex-parent(flex, row, nowrap,center, center, 0, 45px);
+    transition: all 0.3s ease 0s;
     @include mobile {
-      display: none;
+      background-color: $white;
+      color: $midnightblue;
+      font-size: $large-body;
+      font-family: $nav-font;
+      position: fixed;
+      top: $nav-height;
+      left: 0;
+      @include flex-parent(none, column, wrap, center, flex-start, 0, 0);
+      width: 100%;
+    }
+  }
+  &--hamburger__icon{
+    color: $late;
+    display: none;
+    &:hover {
+      color: $white;
+    }
+    @include mobile {
+      display: flex;
+      &:focus {
+        color: $white;
+      }
     }
   }
 
-  &--menu-hamburger {
-    display: none;
-    font-size: $body;
-    font-family: $nav-font;
-    @include flex-parent(flex, row, no-wrap,center, center, 0, 45px);
-    @include mobile {
-      display: static;
-    }
-  }
   &--menu__button {
     @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: space-around,$align-items: center, $gap-x: 0, $gap-y: 10px);
     padding: map-get($padding, nav-element);
@@ -51,8 +64,28 @@
     &:hover {
       color: $late;
     }
+    @include mobile {
+      padding: 0 5%;
+      width: 100%;
+      height: 40px;
+      border-bottom: 2px solid $late;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
     
   }
 }
 
+.navigation--hamburger__icon:hover .navigation--menu {
+  display: flex !important;
+  
+}
 
+.no-display {
+  display: none
+}
+
+.display{
+  display: flex
+}

@@ -9,7 +9,7 @@ interface MenuProps {
 }
 
 export const Menu: React.FC<MenuProps> = ({ className }) => {
-    const [display, setDisplay] = useState(false);
+    const [isActive, setActive] = useState(false);
     const [productCategories, setProductCategories] = useState<any[]>([]);
     const [materialCategories, setMaterialCategories] = useState<any[]>([]);
     
@@ -30,6 +30,13 @@ export const Menu: React.FC<MenuProps> = ({ className }) => {
     
     
     const icon = "expand_more";
+
+    // const handleToggle = (e) => {
+    //     console.log(e.target.parentElement.querySelector("div"))
+    //     e.target.classList.toggle('rotate');
+    //     e.target.parentElement.querySelector(".dropdown-menu").classList.toggle('menuSlideDown');
+    //     setActive(!isActive)
+    // }
    
     return (
         <>
@@ -38,25 +45,19 @@ export const Menu: React.FC<MenuProps> = ({ className }) => {
                 <Link to = "/produkty"
                     className={`${className}--menu__button dropdown`} >
                     Produkty
-                    {<GoogleIcon className={display ? ` rotate ${className}` : `${className}`} icon={icon} />}
-                    <DropdownMenu categoryType = "produkty" categoriesList={productCategories} classAnimation={display ? "menuSlideDown" :  "" }
+                    {<GoogleIcon   className={className} icon={icon} />}
+                    <DropdownMenu categoryType = "produkty" categoriesList={productCategories} classAnimation={ "" }
                 /> 
                 </Link>
                 <Link to = "/materialy"
                     className={`${className}--menu__button dropdown`} >
                     Materiały
-                    {<GoogleIcon className={display ? ` rotate ${className}` : `${className}`} icon={icon} />}
-                    <DropdownMenu categoryType = "materialy"  categoriesList={materialCategories} classAnimation={display ? "menuSlideDown" :  "" }
+                    {<GoogleIcon  className={className} icon={icon} />}
+                    <DropdownMenu categoryType = "materialy"  categoriesList={materialCategories} classAnimation={ "" }
                 /> 
                 </Link>
                 <Link className={`${className}--menu__button`} to="/jakKupowac">Jak kupować</Link>
                 <Link className={`${className}--menu__button`} to= "/Kontakt">Kontakt</Link>
-                
-                
-            {/* <a className={`${className}--menu__button`} href="#products">Produkty {<GoogleIcon className={className} icon={icon}/>}</a>
-            <a className={`${className}--menu__button`} href="#materials">Materiały {<GoogleIcon className={className} icon={icon}/>}</a>
-            <a className={`${className}--menu__button`} href="#howToBuy">Jak kupować</a>
-            <a className={`${className}--menu__button`} href="#contact">Kontakt</a> */}
         </div>
         </>
     )

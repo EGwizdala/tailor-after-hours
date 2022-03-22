@@ -10,6 +10,6 @@ interface ButtonLinkProps {
 
 export const ButtonLink: React.FC<ButtonLinkProps> = ({ className, icon, children, href}) => (
     <Link to={href} className={`${className}__button buttonLink`} >{children} {icon} </Link>
-    // <a className={`${className}__button buttonLink`} href={`#${href}`}></a>
+ 
 );
     

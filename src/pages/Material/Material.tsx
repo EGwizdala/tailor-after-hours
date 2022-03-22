@@ -43,7 +43,7 @@ export const Material= () => {
                 imageSrc={backgroundHeader}
             />
             <article className={className}>
-            <nav className={`${className}__nav`}><Breadcrumbs product={product.name} category={product.category} id={product.id}/>
+                <nav className={`${className}__nav`}><Breadcrumbs mainCategory="materialy" product={product.name} category={product.category} id={product.id}/>
             </nav>
                 <Slider
                     category = "materialy"
