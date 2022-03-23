@@ -35,8 +35,8 @@ export const Material= () => {
         }
         if (isError) {
             return <PageError />
-        }  
-
+    }
+    
     return (
         <section id = "material" >
             <Header

@@ -10,9 +10,6 @@ interface SliderProps {
     category: string
 }
 
-interface Provider {
-  imgList: string;
-}
 
 export const Slider: React.FC<SliderProps> = ({className, imageName, fileType, category}) => {
 
@@ -64,7 +61,7 @@ export const Slider: React.FC<SliderProps> = ({className, imageName, fileType, c
     for (let i = 1; i <= imagesCount; i++) {
       checkIfImageExists(`${process.env.PUBLIC_URL}/images/${category}/${imageName}_${i}.${fileType}`, (exists) => {
           if (exists) {
-            console.log('Image exists in effect. ');
+            // console.log('Image exists in effect. ');
             setImgList((imgs: any) => [...imgs, `${imageName}_${i}`]);
     
               
@@ -76,17 +73,6 @@ export const Slider: React.FC<SliderProps> = ({className, imageName, fileType, c
   
   }, [])
   pushImages();
-  console.log(imgList)
-  console.log(imageList)
-  // USAGE
-  // checkIfImageExists(`${process.env.PUBLIC_URL}/images/clothes/${imageName}_1.${fileType}`, (exists) => {
-  //   if (exists) {
-  //     console.log('Image exists. ')
-  //   } else {
-  //     console.error('Image does not exists.')
-  //   }
-  // });
-    
     
     return (
         <div className={`${className}__slider ${sliderClassName}`} >
