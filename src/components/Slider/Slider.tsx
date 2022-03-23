@@ -41,7 +41,7 @@ export const Slider: React.FC<SliderProps> = ({className, imageName, fileType, c
   
     const pushImages = () => {
         for (let i = 1; i <= imagesCount; i++) {
-            checkIfImageExists(`${process.env.PUBLIC_URL}/images/${category}/${imageName}_${i}.${fileType}`, (exists) => {
+            checkIfImageExists(`${process.env.PUBLIC_URL}/images/${category}/${imageName.toLocaleLowerCase()}_${i}.${fileType}`, (exists) => {
                 if (exists) {
                   console.log('Image exists. ');
                   // setImgList((imgs: any) => [...imgs, imageName]);

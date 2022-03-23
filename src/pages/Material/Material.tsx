@@ -48,7 +48,7 @@ export const Material= () => {
                 <Slider
                     category = "materialy"
                     className={className}
-                    imageName={`${product.category}_${product.id}`}
+                    imageName={`${product.category.toLowerCase()}_${product.id}`}
                     fileType = "jpg"
                 />
                 < MaterialDescription

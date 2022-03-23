@@ -1,10 +1,11 @@
 
 import React from 'react';
-
 import { Header } from '../../components/Header/Header';
-import { BuyPathCard } from '../../components/BuyPathCard/BuyPathCard';
 import { ButtonLink } from '../../components/Button/ButtonLink';
-import {SeeGallery} from '../../components/SeeGallery'
+import { SeeGallery } from '../../components/SeeGallery';
+
+import Mail from '../../svg/Mail.svg'
+import Stamps from '../../svg/Stamps.svg'
 
 import backgroundHeader  from "../../images/top-view-accessories.jpg";
 
@@ -18,29 +19,6 @@ export const HowToBuy= () => {
 
     const className = "howToBuy";
 
-    const buyerPathElements =[
-        { id: 1,
-            text: 'Jeżeli podoba Ci się jakiś produkt, wyślij zapytanie korzystając z zakładki kontakt.'
-        },
-        { id: 2,
-            text: 'Mailowo ustalimy szczegółów zamówienia, wycenę i termin wysyłki.'
-        },
-        { id: 3,
-            text: 'Ustalenia zostaną zawarte w formularzu zlecenia, który zostanie przesłany do Ciebie pocztą.'
-        },
-        { id: 4,
-            text: 'Po mailowym zaakceptowaniu i dokonaniu przedpłaty, przystąpimy do realizacji zlecenia.' },
-        { id: 5,
-            text: 'Przesyłki wysyłamy paczkomatem. Koszt przesyłki będzie doliczony do kosztów zamówienia. Istnieje możliwość odbioru osobistego w Skierniewicach.'
-        },
-               
-    ]
-
-    const buyerPath = buyerPathElements.map(element => {
-        return <BuyPathCard key={element.id} number={element.id} text={element.text} />
-    })
-  
-
     return (
 
         <section id = "howToBuy" >
@@ -49,11 +27,25 @@ export const HowToBuy= () => {
             <article className = {className}>
               
                 <h1 className={`${className}__header`}>Jak kupować?</h1>
-                <p className={`${className}__paragraph`}>Produkty wykonywane są na zamówienie i każdorazowo istnieje możliwość modyfikacji danego produktu (rodzaj materiału, kolor, rozmiar itp.) wg indywidualnych potrzeb. Wszystkie produkty są wykonywane na zamówienie wg ustalonej specyfikacji z zamawiającym, dlatego też nie podlegają one zwrotowi.</p>
-                <p className={`${className}__paragraph`}>W celu indywidualnej wyceny należy postępować wg poniższego schematu:</p>
-                <ul className={`${className}__path`}>
-               { buyerPath}
+                <p className={`${className}__paragraph full-width`}>Produkty wykonywane są na zamówienie i każdorazowo istnieje możliwość modyfikacji danego produktu (rodzaj materiału, kolor, rozmiar itp.) wg indywidualnych potrzeb. Wszystkie produkty są wykonywane na zamówienie wg ustalonej specyfikacji z zamawiającym, dlatego też nie podlegają one zwrotowi.</p>
+                <img className={`${className}__img`}
+                    src={Mail} alt="Mail svg" />
+                <p className={`${className}__paragraph`}>Jeśli jesteś zainteresowana zakupem, skontaktuj się z nami.<br />W informacji podaj produkt, który Cię interesuje, rozmiar, wybrany materiał oraz sposob dostawy:</p>
+                <img src={Stamps} alt="Stamps svg" />
+                <div className={`${className}__paragraph`}>
+                <ul className={`${className}__ul`}>Poczta Polska:
+                 <li>kurier</li>
+                 <li>paczka</li>
                 </ul>
+                <ul className={`${className}__ul`}>Paczka Inpost:
+                 <li>kurier</li>
+                 <li>paczkomat</li>
+                </ul>
+                </div>
+                
+                <h1 className={`${className}__header`}>Pamiętaj !</h1>
+                <p className={`${className}__paragraph full-width` }>Wszystkie produkty są wykonywane na zamówienie wg ustalonej specyfikacji z zamawiającym, dlatego też nie podlegają one zwrotowi.</p>
+                
                 <ButtonLink  href = "/Kontakt" className={className} icon={east}>Masz pytania? Napisz</ButtonLink>
                 <SeeGallery className={`${className}__reference`}/>
             </article>
