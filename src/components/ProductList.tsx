@@ -57,7 +57,7 @@ export const ProductList: React.FC<ProductListProps> = ({ title, category }) => 
             title={title}
             category={category}
         >
-            {cardListDisplay}
+      {cardListDisplay}
             <Outlet />
             
         </CardListElement>

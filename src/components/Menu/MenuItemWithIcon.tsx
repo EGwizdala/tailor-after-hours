@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { DropdownMenu} from './DropdownMenu/DropdownMenu'
 import { GoogleIcon } from '../GoogleIcon';
@@ -12,18 +12,17 @@ interface MenuProps {
 }
 
 export const MenuItemWithIcon: React.FC<MenuProps> = ({ className, elementCategories, categoryType, title, onClick }) => {
-    const [isActive, setActive] = useState(false);
-    
-    const icon = "expand_more";
+    const icon = "chevron_right";
 
    
     return (
         <Link
-            // onClick={onClick}
+            
             id = {categoryType}
             to={`/${categoryType}`}
             className={`${className}__button dropdown`} >
-            {title}
+            <span onClick={onClick} >{title}</span>
+           
             {<GoogleIcon onClick={onClick} className={className} icon={icon}  />}
             <DropdownMenu className = "dropdown-menu" categoryType = {`${categoryType}`} categoriesList={elementCategories} classAnimation={ "" }
             />

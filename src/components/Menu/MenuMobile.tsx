@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-
+import { slide as Slide } from 'react-burger-menu';
 import { Menu } from './Menu';
 import {SideMenu} from './SideMenu/SideMenu'
 import { getCategories } from '../../data/data';
@@ -13,10 +13,15 @@ export const MenuMobile: React.FC<MenuProps> = ({ className }) => {
     const [materialIsActive, setMaterialIsActive] = useState(false);
     const [productCategories, setProductCategories] = useState<any[]>([]);
     const [materialCategories, setMaterialCategories] = useState<any[]>([]);
-    
+   
 
     const productId = 'produkty';
     const materialId = 'materialy'
+
+
+    
+
+    
 
     useEffect(() => {
         const productCategoriesData = getCategories("http://mighty-beyond-31038.herokuapp.com/api/categories");
@@ -31,11 +36,12 @@ export const MenuMobile: React.FC<MenuProps> = ({ className }) => {
 
           };
           printCategories();
- 
+          
          
     }, [])
 
 
+    
 
     const handleToggle = (e) => {
         const id = e.target.parentElement.id;
@@ -55,14 +61,11 @@ export const MenuMobile: React.FC<MenuProps> = ({ className }) => {
             setMaterialIsActive(false)
         }
     }
-    console.log(productIsActive)
-    console.log(materialIsActive)
-   
+  
     return (
         <>
-            
-            <Menu onClick={handleToggle} className={!productIsActive || !materialIsActive ? className : `no-display ${className}`} />
-            
+            {!materialIsActive ? <Menu id = 'burger-menu' onClick={handleToggle} className={className} /> : null}
+       
             {productIsActive ? <SideMenu
                 onClick={handleToggle}
                 elementCategories={productCategories}

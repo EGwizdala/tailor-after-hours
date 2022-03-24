@@ -13,7 +13,7 @@ interface DropdownMenuProps {
 export const DropdownMenu: React.FC<DropdownMenuProps> = ({ classAnimation, categoriesList, categoryType, className }) => {
     const [categories, setCategories] = useState<any[]>([]);
     
-    // const className = "dropdown-menu";
+    
     
  
 

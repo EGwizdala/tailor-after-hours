@@ -84,8 +84,13 @@
 
 .no-display {
   display: none !important;
+  
 }
 
 .display{
-  display: flex
+  display: none ;
+  @include mobile {
+    display: flex
+  }
+  
 }
