@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tailor-after-hours/static/css/main.cf65bc30.css",
-    "main.js": "/tailor-after-hours/static/js/main.f47c7a36.js",
+    "main.css": "/tailor-after-hours/static/css/main.995a23af.css",
+    "main.js": "/tailor-after-hours/static/js/main.730ab4cb.js",
     "static/js/787.c58fa5e7.chunk.js": "/tailor-after-hours/static/js/787.c58fa5e7.chunk.js",
     "static/media/top-view-accessories.jpg": "/tailor-after-hours/static/media/top-view-accessories.7c0e942185c6280e24fb.jpg",
     "static/media/Loading.jpg": "/tailor-after-hours/static/media/Loading.c6b78652948a54ab4109.jpg",
@@ -14,12 +14,12 @@
     "static/media/Instagram.svg": "/tailor-after-hours/static/media/Instagram.d35760b6755f01d63f225d9494882733.svg",
     "index.html": "/tailor-after-hours/index.html",
     "static/media/Facebook.svg": "/tailor-after-hours/static/media/Facebook.cc69fb815a9e09dabf761e9264c92f1f.svg",
-    "main.cf65bc30.css.map": "/tailor-after-hours/static/css/main.cf65bc30.css.map",
-    "main.f47c7a36.js.map": "/tailor-after-hours/static/js/main.f47c7a36.js.map",
+    "main.995a23af.css.map": "/tailor-after-hours/static/css/main.995a23af.css.map",
+    "main.730ab4cb.js.map": "/tailor-after-hours/static/js/main.730ab4cb.js.map",
     "787.c58fa5e7.chunk.js.map": "/tailor-after-hours/static/js/787.c58fa5e7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf65bc30.css",
-    "static/js/main.f47c7a36.js"
+    "static/css/main.995a23af.css",
+    "static/js/main.730ab4cb.js"
   ]
 }
