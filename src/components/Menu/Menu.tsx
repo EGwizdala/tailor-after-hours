@@ -11,7 +11,7 @@ interface MenuProps {
 }
 
 export const Menu: React.FC<MenuProps> = ({ className, id, onClick }) => {
-    const [isActive, setActive] = useState(false);
+
     const [productCategories, setProductCategories] = useState<any[]>([]);
     const [materialCategories, setMaterialCategories] = useState<any[]>([]);
 
@@ -32,22 +32,13 @@ export const Menu: React.FC<MenuProps> = ({ className, id, onClick }) => {
  
     }, [])
     
-    
-    const icon = "expand_more";
-
-    // const handleToggle = (e) => {
-    //     console.log(e.target.parentElement.querySelector("div"))
-    //     e.target.classList.toggle('rotate');
-    //     e.target.parentElement.querySelector(".dropdown-menu").classList.toggle('menuSlideDown');
-    //     setActive(!isActive)
-    // }
    
     return (
        
         <div className={`${className}--menu`} id = {id}>
                 <Link className={`${className}--menu__button`} to="/oMnie">O mnie</Link>
-                <MenuItemWithIcon onClick={onClick}className={`${className}--menu`} elementCategories={productCategories} categoryType="produkty" title = "produkty" />
-                <MenuItemWithIcon className={`${className}--menu`} onClick={onClick}elementCategories={materialCategories} categoryType = "materialy" title = "materiały" />
+                <MenuItemWithIcon   icon = "expand_more" onClick={onClick}className={`${className}--menu`} elementCategories={productCategories} categoryType="produkty" title = "produkty" />
+                <MenuItemWithIcon icon = "expand_more"   className={`${className}--menu`} onClick={onClick}elementCategories={materialCategories} categoryType = "materialy" title = "materiały" />
                 <Link className={`${className}--menu__button`} to="/jakKupowac">Jak kupować</Link>
                 <Link className={`${className}--menu__button`} to= "/Kontakt">Kontakt</Link>
         </div>

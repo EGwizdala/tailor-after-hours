@@ -1,0 +1,34 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+
+.freepik {
+    @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 10px, $gap-y: 20px);
+    font-size: $secondary-body;
+    margin-top: 20px;
+    border-top: 1px solid $late;
+    color: $late;
+    @include flex(1, 0, 100%);
+    &__header {
+        @include flex(1, 0, 100%);
+        margin-top: 10px;
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 0, $gap-y: 10px);
+        cursor: pointer;
+    }
+    &__links {
+        @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: flex-start, $align-items: center, $gap-x: 2px, $gap-y: 20px);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        & > * {
+           &:hover {
+               color: $white;
+               text-decoration: underline;
+           } 
+        }
+
+    }
+}
+
+
+.freepik__icon {
+    transition: all 0.3s ease;
+  }

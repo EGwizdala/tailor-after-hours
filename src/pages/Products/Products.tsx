@@ -27,6 +27,7 @@ export const Products = () => {
     return (
         <section id = "products" className = {className}>
             <Header
+                alt = "high-angle-of-seamstress-with-fabrics-and-scissors"
                 imagePosition="center -150px"
                 imageSrc={backgroundHeader} />
             <ProductList title={title} category={title}/>

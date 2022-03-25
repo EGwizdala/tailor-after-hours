@@ -49,12 +49,18 @@
     @include tablet {
         left: 0;
     }
+    @include mobile {
+        left: 10px;
+    }
 }
 
 .image-gallery-right-nav {
     right: -70px;
     @include tablet {
         right: 0;
+    }
+    @include mobile {
+        right: 10px;
     }
 }
    

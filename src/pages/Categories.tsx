@@ -11,6 +11,7 @@ export const Categories = () => {
     return (
         <section id = "categories">
             <Header
+                alt = "high-angle-of-seamstress-with-fabrics-and-scissors"
                 imagePosition="center 80%"
                 imageSrc={backgroundHeader} />
             <ProductCategoryList category = "produkty" title= "produkty"/>

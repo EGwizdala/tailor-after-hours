@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 import { DropdownMenu} from '../DropdownMenu/DropdownMenu'
 import { GoogleIcon } from '../../GoogleIcon';
@@ -20,11 +20,18 @@ export const SideMenu: React.FC<MenuProps> = ({ elementCategories, categoryType,
     return (
         <div
             id = {categoryType}
-            
             className={`${className}`} >
             <div className={`${className}__title`}>{title}</div>
-            <GoogleIcon id = "return" className={className} icon={icon}  onClick={onClick}/>
-            <DropdownMenu className = {`${className}__list`} categoryType = {`${categoryType}`} categoriesList={elementCategories} classAnimation={ "" }
+            <GoogleIcon
+                id="return"
+                className={className}
+                icon={icon}
+                onClick={onClick}
+            />
+            <DropdownMenu
+                className={`${className}__list`}
+                categoryType={`${categoryType}`}
+                categoriesList={elementCategories}
             />
         </div>
     )

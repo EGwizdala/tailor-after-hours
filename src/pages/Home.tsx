@@ -9,7 +9,7 @@ export const Home = () => {
 
     return (
         <section id = "home">
-            <Header  imageSrc={backgroundHeader }/>
+            <Header  alt = "top-view-accessories" imageSrc={backgroundHeader }/>
             <ProductCategoryList category = "produkty" title= "produkty"/>
             <MaterialCategoryList category = "materiały" title= "materiały" />
         </section>

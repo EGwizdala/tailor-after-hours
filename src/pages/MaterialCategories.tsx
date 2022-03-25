@@ -10,6 +10,7 @@ export const MaterialCategories = () => {
     return (
         <section id = "materialCategories">
             <Header
+                alt = "high-angle-of-seamstress-with-fabrics-and-scissors"
                 imagePosition="center 80%"
                 imageSrc={backgroundHeader} />
             <MaterialCategoryList category = "materiały" title= "materiały"/>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './index.scss'
 
@@ -7,16 +7,10 @@ interface DropdownMenuProps {
     categoriesList: any
     categoryType: string
     className: string
-
 }
 
 export const DropdownMenu: React.FC<DropdownMenuProps> = ({ classAnimation, categoriesList, categoryType, className }) => {
-    const [categories, setCategories] = useState<any[]>([]);
-    
-    
-    
  
-
     const category = categoriesList.map((category) => <Link
         key={category.name || category.type}
         className={`${className}__button`}

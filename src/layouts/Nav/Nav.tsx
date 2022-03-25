@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useSpring, animated} from 'react-spring';
 
 import { Logo } from '../../components/Logo';
 import { Menu } from '../../components/Menu/Menu';
@@ -14,21 +15,26 @@ export const Nav = () => {
     const hambrgerIcon = "menu";
 
     const materials = document.querySelectorAll('.side-menu');
-    const hamburgerMenu = document.getElementById('burger-menu')
-    const array = Array.from(materials)
-
-
+    const array = Array.from(materials);
+    const fadeIn = useSpring({
+        to: {
+            opacity: isActive ? 1 : 0,
+        
+        },
+        from: {
+            opacity: 0,
+          
+        },
+        delay: 100,
+    })
+    
     const handleToggle = () => {
         setActive(!isActive)
-    }
-
-
-
+    };
 
     useEffect(() => {
         setActive(false);
     }, [])
-
 
     if (!isActive) {
         array[0]?.classList.add("no-display");
@@ -39,8 +45,9 @@ export const Nav = () => {
             <Logo className = "navigation"/>
             <GoogleIcon onClick={handleToggle} className="navigation--hamburger" icon={hambrgerIcon} />
             <Menu id="top-menu" className="navigation" />
-            
-            <MenuMobile className={isActive ? "display navigation": "no-display navigation" }/>
+            <animated.div style={fadeIn} >
+                <MenuMobile className={isActive ? "display navigation" : "no-display navigation"} />
+            </animated.div>
         </nav>
     )
 } 

@@ -27,6 +27,7 @@ export const Materials = () => {
     return (
         <section id = "materials" className = {className}>
             <Header
+                alt = "high-angle-of-seamstress-with-fabrics-and-scissors"
                 imagePosition="center -150px"
                 imageSrc={backgroundHeader} />
             <MaterialList title={title} category={title}/>

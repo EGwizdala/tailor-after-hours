@@ -6,18 +6,19 @@ import { GoogleIcon } from '../GoogleIcon';
 interface MenuProps {
     className: string
     categoryType: string
+    icon: string
     elementCategories: any[]
     title: string
     onClick?: (e) => void
 }
 
-export const MenuItemWithIcon: React.FC<MenuProps> = ({ className, elementCategories, categoryType, title, onClick }) => {
-    const icon = "chevron_right";
+export const MenuItemWithIcon: React.FC<MenuProps> = ({ className, elementCategories, categoryType, title, icon, onClick }) => {
+  
 
    
     return (
         <Link
-            
+
             id = {categoryType}
             to={`/${categoryType}`}
             className={`${className}__button dropdown`} >

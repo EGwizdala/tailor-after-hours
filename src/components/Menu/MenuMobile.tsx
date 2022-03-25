@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import { slide as Slide } from 'react-burger-menu';
+import React, { useState, useEffect } from 'react';
+import { useSpring, animated } from 'react-spring';
+
 import { Menu } from './Menu';
-import {SideMenu} from './SideMenu/SideMenu'
+import { SideMenu } from './SideMenu/SideMenu';
 import { getCategories } from '../../data/data';
 
 interface MenuProps {
@@ -16,12 +17,7 @@ export const MenuMobile: React.FC<MenuProps> = ({ className }) => {
    
 
     const productId = 'produkty';
-    const materialId = 'materialy'
-
-
-    
-
-    
+    const materialId = 'materialy';
 
     useEffect(() => {
         const productCategoriesData = getCategories("http://mighty-beyond-31038.herokuapp.com/api/categories");
@@ -33,24 +29,16 @@ export const MenuMobile: React.FC<MenuProps> = ({ className }) => {
             const materialList = await mterialCategoriesData;
             setProductCategories(productList);
             setMaterialCategories(materialList)
-
           };
-          printCategories();
-          
-         
+          printCategories(); 
     }, [])
 
 
-    
-
     const handleToggle = (e) => {
         const id = e.target.parentElement.id;
-        console.log(e.target.parentElement)
-
         if (id === productId) {
             setProductIsActive(!productIsActive)
-           
-            
+  
         }
         if (id === materialId) {
             setMaterialIsActive(!materialIsActive)
@@ -61,22 +49,54 @@ export const MenuMobile: React.FC<MenuProps> = ({ className }) => {
             setMaterialIsActive(false)
         }
     }
+
+
+  
+    const fadeInMaterial = useSpring({
+        to: {
+            opacity: materialIsActive ? 1 : 0,
+        },
+        from: {
+            opacity: 0,
+        },
+        delay: 100,
+    });
+
+    const fadeInProduct = useSpring({
+        to: {
+            opacity: productIsActive ? 1 : 0,
+        },
+        from: {
+            opacity: 0,
+        },
+        delay: 100,
+    })
   
     return (
         <>
-            {!materialIsActive ? <Menu id = 'burger-menu' onClick={handleToggle} className={className} /> : null}
+            {!materialIsActive ? <Menu  id = 'burger-menu' onClick={handleToggle} className={className} /> : null}
        
-            {productIsActive ? <SideMenu
-                onClick={handleToggle}
-                elementCategories={productCategories}
-                categoryType={productId}
-                title={productId} /> : null}
+            {productIsActive ?
+                <animated.div
+                    style={fadeInProduct}>
+                    <SideMenu
+                        onClick={handleToggle}
+                        elementCategories={productCategories}
+                        categoryType={productId}
+                        title={productId} />
+                </animated.div>
+                : null}
 
-            {materialIsActive ? 
-            <SideMenu onClick={handleToggle}
-                elementCategories={materialCategories}
-                categoryType={materialId}
-                    title={materialId} /> : null
+            {materialIsActive ?
+                <animated.div
+                    style={fadeInMaterial}>
+                    <SideMenu
+                        onClick={handleToggle}
+                        elementCategories={materialCategories}
+                        categoryType={materialId}
+                        title={materialId} />
+                </animated.div>
+                : null
             }
         </>
     )

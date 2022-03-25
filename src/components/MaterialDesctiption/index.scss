@@ -68,6 +68,8 @@
         } 
         @include tablet {
             height: 56px;
+            margin-left: 100%;
+            transform: translateX(-100%)
         }
         @include mobile {
             height: 56px;

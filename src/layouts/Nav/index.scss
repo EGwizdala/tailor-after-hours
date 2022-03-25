@@ -12,6 +12,7 @@
   z-index: 5;
   &__icon {
     transition: all 0.3s ease 0s;
+    
   }
   &--logo {
     font-family: $header-font;
@@ -29,6 +30,11 @@
     font-family: $nav-font;
     @include flex-parent(flex, row, nowrap,center, center, 0, 45px);
     transition: all 0.3s ease 0s;
+    &__icon {
+      @include mobile {
+          transform:  rotate(-90deg);
+      }
+    }
     @include mobile {
       background-color: $white;
       color: $midnightblue;
@@ -81,6 +87,7 @@
   display: flex !important;
   
 }
+
 
 .no-display {
   display: none !important;

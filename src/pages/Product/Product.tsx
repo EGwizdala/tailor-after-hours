@@ -39,6 +39,7 @@ export const Product= () => {
     return (
         <section id = "product" >
             <Header
+                alt = "back-view-of-female-tailor-with-patterns-in-hands"
                 imageSrc={backgroundHeader}
             />
             <article className={className}>

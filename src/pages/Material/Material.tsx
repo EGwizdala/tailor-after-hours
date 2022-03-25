@@ -40,6 +40,7 @@ export const Material= () => {
     return (
         <section id = "material" >
             <Header
+                alt = "back-view-of-female-tailor-with-patterns-in-hands"
                 imageSrc={backgroundHeader}
             />
             <article className={className}>

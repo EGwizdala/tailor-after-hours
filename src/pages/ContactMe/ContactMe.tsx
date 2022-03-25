@@ -14,6 +14,7 @@ export const ContactMe = () => {
     return (
         <section id = {className}  className = {className}>
             <Header
+                alt = "back-view-of-female-tailor-with-patterns-in-hands"
                 backgroundSize="150%"
                 imagePosition="center 80px"
                 imageSrc={backgroundHeader} />

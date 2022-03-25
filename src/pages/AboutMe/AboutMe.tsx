@@ -27,10 +27,13 @@ export const AboutMe = () => {
 
         <section id = "aboutMe" >
             <Header
+                alt = "back-view-of-female-tailor-with-patterns-in-hands"
                 imagePosition="50% -250px"
                 imageSrc={backgroundHeader}/>
             <article className = {className}>
-                <div className={`${className}__image`} style = {articleImageStyle} >
+                <div className={`${className}__image`} style={articleImageStyle} >
+                    <a href='https://pl.freepik.com/zdjecia/kobieta'>Kobieta zdjęcie utworzone przez freepik - pl.freepik.com</a>
+                    <span role="img" aria-label='high-angle-of-seamstress-using-sewing-machine'> </span>
                 </div>
                 <h1 className={`${className}__header`}>O mnie</h1>
                 <h2 className={`${className}__subtitle`}>Szycie to moja pasja! </h2>

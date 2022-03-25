@@ -51,12 +51,14 @@
         @include mobile {
             justify-self: start;
         }
-        
     }
  
     &__slider {
         grid-area: slider;
         justify-self: end;
+        @include tablet {
+            justify-self: center;
+        }
     }
     &__container {
         grid-area: container;

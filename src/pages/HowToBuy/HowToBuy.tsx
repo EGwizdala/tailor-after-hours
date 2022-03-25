@@ -23,6 +23,7 @@ export const HowToBuy= () => {
 
         <section id = "howToBuy" >
             <Header
+                alt = "top-view-accessories"
                 imageSrc={backgroundHeader} />
             <article className = {className}>
               

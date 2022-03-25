@@ -80,6 +80,7 @@
         } 
         @include tablet {
             height: 56px;
+            margin-left: 50%;
         }
         @include mobile {
             height: 56px;
