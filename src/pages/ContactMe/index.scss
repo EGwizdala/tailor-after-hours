@@ -29,6 +29,7 @@
             @include flex(0, 0, 70%);
             @include flex-parent($display: flex, $direction: row, $wrap: wrap, $justify-content: center, $align-items: center, $gap-x: 0, $gap-y: 0);
             height: 40vh;
+            max-width: 536px;
         }
         @include mobile {
             @include flex(0, 0, 90%);

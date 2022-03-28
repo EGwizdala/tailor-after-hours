@@ -12,9 +12,9 @@ export const SeeGallery: React.FC<SeeGalleryProps> = ({className}) => {
     const title = "zobacz galerię";
     const cardClassName = "cardList"
     const cardListDisplay = listElements.map((element) => {
-            console.log(element) 
+           
         return (
-            <ImageWithButton category={element=== "materiały" ? 'materialy' : element} className = {`${cardClassName}__card`} key={element} imageSrc={`${element}.svg`} productType= {element} buttonText={element}/>
+            <ImageWithButton category={element === "materiały" ? 'materialy' : element} className = {`${cardClassName}__card`} key={element} imageSrc={`${element}.svg`} productType= {element} buttonText={element}/>
             )
     });
 

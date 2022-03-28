@@ -32,7 +32,6 @@ export const AboutMe = () => {
                 imageSrc={backgroundHeader}/>
             <article className = {className}>
                 <div className={`${className}__image`} style={articleImageStyle} >
-                    <a href='https://pl.freepik.com/zdjecia/kobieta'>Kobieta zdjęcie utworzone przez freepik - pl.freepik.com</a>
                     <span role="img" aria-label='high-angle-of-seamstress-using-sewing-machine'> </span>
                 </div>
                 <h1 className={`${className}__header`}>O mnie</h1>

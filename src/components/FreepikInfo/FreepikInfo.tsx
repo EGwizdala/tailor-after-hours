@@ -39,6 +39,7 @@ export const FreepikInfo: React.FC<Freepik> = ({className}) => {
                 <a href='https://pl.freepik.com/zdjecia/mezczyzna'>Mężczyzna zdjęcie utworzone przez rawpixel.com - pl.freepik.com,</a>
                 <a href="https://pl.freepik.com/zdjecia/dziewczyna">Dziewczyna zdjęcie utworzone przez master1305 - pl.freepik.com,</a>
                 <a href="https://pl.freepik.com/zdjecia/tlo">Tło zdjęcie utworzone przez photoroyalty - pl.freepik.com,</a>
+                
                 </animated.div>
                 : null }
                 
