@@ -33,7 +33,7 @@ export const ProductCategoryList: React.FC<ProductCategoryListProps> = ({ title,
     }, [])
 
 
-    const cardListDisplay = categories.filter(product => product.name != category).map((product) => {
+    const cardListDisplay = categories.filter(product => product.name !== category).map((product) => {
         return (
             <ImageWithButton
                 category = "produkty"

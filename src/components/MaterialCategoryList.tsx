@@ -28,7 +28,7 @@ export const MaterialCategoryList: React.FC<ProductCategoryListProps> = ({ title
       return <PageError />
     }  
 
-    const cardListDisplay = materialData.filter(material => material.type != category).map((material) => {
+    const cardListDisplay = materialData.filter(material => material.type !== category).map((material) => {
         return (
             <ImageWithButton
                     category = "materialy"

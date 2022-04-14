@@ -58,7 +58,7 @@ export const MaterialList: React.FC<MaterialListProps> = ({ title, category }) =
             title={title}
             category={category}
         >
-            {cardListDisplay}
+      {cardListDisplay}
             <Outlet />
             
         </CardListElement>
