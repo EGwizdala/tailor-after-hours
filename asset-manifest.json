@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/tailor-after-hours/static/css/main.0d30375c.css",
-    "main.js": "/tailor-after-hours/static/js/main.de498be9.js",
+    "main.css": "/tailor-after-hours/static/css/main.0ea0fdc7.css",
+    "main.js": "/tailor-after-hours/static/js/main.01a5064a.js",
     "static/js/787.c58fa5e7.chunk.js": "/tailor-after-hours/static/js/787.c58fa5e7.chunk.js",
     "static/media/top-view-accessories.jpg": "/tailor-after-hours/static/media/top-view-accessories.7c0e942185c6280e24fb.jpg",
-    "static/media/Loading.jpg": "/tailor-after-hours/static/media/Loading.c6b78652948a54ab4109.jpg",
-    "static/media/Error.jpg": "/tailor-after-hours/static/media/Error.42f5456c96fd00bbc32b.jpg",
     "static/media/high-angle-of-seamstress-with-fabrics-and-scissors.jpg": "/tailor-after-hours/static/media/high-angle-of-seamstress-with-fabrics-and-scissors.94b0079bfb1261ab336c.jpg",
     "static/media/high-angle-of-seamstress-using-sewing-machine.jpg": "/tailor-after-hours/static/media/high-angle-of-seamstress-using-sewing-machine.c49bb8691224e1e68007.jpg",
     "static/media/back-view-of-female-tailor-with-patterns-in-hands.jpg": "/tailor-after-hours/static/media/back-view-of-female-tailor-with-patterns-in-hands.5afb1c9f5814caf1e5f1.jpg",
     "static/media/Stamps.svg": "/tailor-after-hours/static/media/Stamps.34cbaef3618e5ef8495dfdfd58a441d6.svg",
     "static/media/Mail.svg": "/tailor-after-hours/static/media/Mail.2ace731c7c66f042740b599e4d63902f.svg",
+    "static/media/error.svg": "/tailor-after-hours/static/media/error.c3f83a5280df04c0ee6ea59bceecde59.svg",
+    "static/media/loading.svg": "/tailor-after-hours/static/media/loading.135b71832ea39b27baf5efcd5a0e6b51.svg",
     "static/media/Instagram.svg": "/tailor-after-hours/static/media/Instagram.d35760b6755f01d63f225d9494882733.svg",
     "index.html": "/tailor-after-hours/index.html",
     "static/media/Facebook.svg": "/tailor-after-hours/static/media/Facebook.cc69fb815a9e09dabf761e9264c92f1f.svg",
-    "main.0d30375c.css.map": "/tailor-after-hours/static/css/main.0d30375c.css.map",
-    "main.de498be9.js.map": "/tailor-after-hours/static/js/main.de498be9.js.map",
+    "main.0ea0fdc7.css.map": "/tailor-after-hours/static/css/main.0ea0fdc7.css.map",
+    "main.01a5064a.js.map": "/tailor-after-hours/static/js/main.01a5064a.js.map",
     "787.c58fa5e7.chunk.js.map": "/tailor-after-hours/static/js/787.c58fa5e7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d30375c.css",
-    "static/js/main.de498be9.js"
+    "static/css/main.0ea0fdc7.css",
+    "static/js/main.01a5064a.js"
   ]
 }
